@@ -13,6 +13,10 @@ class Members(models.Model):
     title = models.CharField(max_length=100)
     title_ar = models.CharField(max_length=100, blank=True, null=True)
 
+    class Meta:
+        verbose_name        = "Members"
+        verbose_name_plural = "Members"
+
     def __str__(self):
         return self.name
 
@@ -21,6 +25,10 @@ class Roles(models.Model):
     role = models.CharField(max_length=50)
     role_ar = models.CharField(max_length=50, blank=True, null=True)
     description = models.TextField(blank=True, null=True)
+
+    class Meta:
+        verbose_name        = "Roles"
+        verbose_name_plural = "Roles"
 
     def __str__(self):
         return self.role
@@ -31,6 +39,10 @@ class RoleDuty(models.Model):
     duty_ar = models.CharField(max_length=100, blank=True, null=True)
     role = models.ForeignKey(Roles, on_delete=models.CASCADE)
 
+    class Meta:
+        verbose_name        = "Role Duty"
+        verbose_name_plural = "Role Duty"
+
     def __str__(self):
         return self.duty
 
@@ -39,6 +51,9 @@ class ProjectPriority(models.Model):
     priority = models.CharField(max_length=50)
     priority_ar = models.CharField(max_length=50, blank=True, null=True)
     color = models.CharField(max_length=7)  # Assuming color code in hexadecimal format
+    class Meta:
+        verbose_name        = "Project Priority"
+        verbose_name_plural = "Project Priority"
 
     def __str__(self):
         return self.priority
@@ -48,6 +63,9 @@ class ProjectStatus(models.Model):
     status = models.CharField(max_length=50)
     status_ar = models.CharField(max_length=50, blank=True, null=True)
     color = models.CharField(max_length=7)  # Assuming color code in hexadecimal format
+    class Meta:
+        verbose_name        = "Project Status"
+        verbose_name_plural = "Project Status"
 
     def __str__(self):
         return self.status
@@ -58,7 +76,11 @@ class Projects(models.Model):
     name_ar = models.CharField(max_length=100, blank=True, null=True)
     priority = models.ForeignKey(ProjectPriority, on_delete=models.CASCADE)
     status = models.ForeignKey(ProjectStatus, on_delete=models.CASCADE)
-
+    
+    class Meta:
+        verbose_name        = "Projects"
+        verbose_name_plural = "Projects"
+    
     def __str__(self):
         return self.name
 
@@ -69,6 +91,8 @@ class ProjectMembers(models.Model):
 
     class Meta:
         unique_together = (("project", "member", "role"),)
+        verbose_name        = "Project Members"
+        verbose_name_plural = "Project Members"
 
     def __str__(self):
         return f"{self.project} - {self.member} - {self.role}"
