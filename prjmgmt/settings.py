@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     # internal applications
     'users',
     'projects',
+    'tasks',
+    'organizations',
 ]
 
 MIDDLEWARE = [

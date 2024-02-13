@@ -11,7 +11,7 @@ from django.urls import path
 from projects.views import home, build #,query
 
 urlpatterns = [
-    path('', home, name='projects-home'),
+    path('', home, name='project-home'),
     path('build', build, name='db-build'),
 
 ]

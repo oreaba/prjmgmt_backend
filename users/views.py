@@ -7,4 +7,4 @@ from django.http import JsonResponse
 
 
 def home(request):
-    return JsonResponse({"app":'users'})
+    return JsonResponse({"app":'user'})

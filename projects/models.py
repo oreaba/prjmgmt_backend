@@ -1,63 +1,70 @@
 from django.db import models
-
 # Create your models here.
 from django.db import models
+from users.models import User, Role
 
-class Members(models.Model):
-    member_id = models.AutoField(primary_key=True)
-    name = models.CharField(max_length=100)
+
+class Portfolio(models.Model):
+    portfolio_id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=100, blank=True, null=True)
     name_ar = models.CharField(max_length=100, blank=True, null=True)
-    email = models.EmailField(unique=True)
-    mobile = models.CharField(max_length=20)
-    extension = models.CharField(max_length=10, blank=True, null=True)
-    title = models.CharField(max_length=100)
-    title_ar = models.CharField(max_length=100, blank=True, null=True)
-
     class Meta:
-        verbose_name        = "Members"
-        verbose_name_plural = "Members"
+        verbose_name        = "Portfolio"
+        verbose_name_plural = "Portfolio"
 
     def __str__(self):
         return self.name
+# -------------------------------------------------------------------------------------------------
+class Program(models.Model):
+    program_id = models.AutoField(primary_key=True)
+    portfolio = models.ForeignKey(Portfolio, on_delete=models.PROTECT)
+    
+    name = models.CharField(max_length=100, blank=True, null=True)
+    name_ar = models.CharField(max_length=100, blank=True, null=True)
+    class Meta:
+        verbose_name        = "Program"
+        verbose_name_plural = "Program"
 
-class Roles(models.Model):
-    role_id = models.AutoField(primary_key=True)
-    role = models.CharField(max_length=50)
-    role_ar = models.CharField(max_length=50, blank=True, null=True)
+    def __str__(self):
+        return self.name
+# -------------------------------------------------------------------------------------------------
+class Project(models.Model):
+    project_id = models.AutoField(primary_key=True)
+    program = models.ForeignKey(Program, on_delete=models.PROTECT)
+
+    name = models.CharField(max_length=100)
+    name_ar = models.CharField(max_length=100, blank=True, null=True)
     description = models.TextField(blank=True, null=True)
+    start_date = models.DateField(blank=True, null=True)
+    end_date = models.DateField(blank=True, null=True)
+    status = models.ForeignKey('ProjectStatus', on_delete=models.PROTECT)
+    priority = models.ForeignKey('ProjectPriority', on_delete=models.PROTECT)
+    
+    manager = models.ForeignKey(User, on_delete=models.CASCADE, related_name='managed_project')
+
+    created_by = models.ForeignKey(User, on_delete=models.PROTECT, related_name='created_project')
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    class Meta:
+        verbose_name        = "Project"
+        verbose_name_plural = "Project"
+    
+    def __str__(self):
+        return self.name
+# -------------------------------------------------------------------------------------------------
+class ProjectUser(models.Model):
+    project = models.ForeignKey(Project, on_delete=models.PROTECT)
+    user = models.ForeignKey(User, on_delete=models.PROTECT)
+    role = models.ForeignKey(Role, on_delete=models.PROTECT)
 
     class Meta:
-        verbose_name        = "Roles"
-        verbose_name_plural = "Roles"
+        unique_together = (("project", "user", "role"),)
+        verbose_name        = "Project User"
+        verbose_name_plural = "Project User"
 
     def __str__(self):
-        return self.role
-
-class RoleDuty(models.Model):
-    duty_id = models.AutoField(primary_key=True)
-    duty = models.CharField(max_length=100)
-    duty_ar = models.CharField(max_length=100, blank=True, null=True)
-    role = models.ForeignKey(Roles, on_delete=models.CASCADE)
-
-    class Meta:
-        verbose_name        = "Role Duty"
-        verbose_name_plural = "Role Duty"
-
-    def __str__(self):
-        return self.duty
-
-class ProjectPriority(models.Model):
-    priority_id = models.AutoField(primary_key=True)
-    priority = models.CharField(max_length=50)
-    priority_ar = models.CharField(max_length=50, blank=True, null=True)
-    color = models.CharField(max_length=7)  # Assuming color code in hexadecimal format
-    class Meta:
-        verbose_name        = "Project Priority"
-        verbose_name_plural = "Project Priority"
-
-    def __str__(self):
-        return self.priority
-
+        return f"{self.project} - {self.user} - {self.role}"
+# -------------------------------------------------------------------------------------------------
 class ProjectStatus(models.Model):
     status_id = models.AutoField(primary_key=True)
     status = models.CharField(max_length=50)
@@ -69,30 +76,16 @@ class ProjectStatus(models.Model):
 
     def __str__(self):
         return self.status
-
-class Projects(models.Model):
-    project_id = models.AutoField(primary_key=True)
-    name = models.CharField(max_length=100)
-    name_ar = models.CharField(max_length=100, blank=True, null=True)
-    priority = models.ForeignKey(ProjectPriority, on_delete=models.CASCADE)
-    status = models.ForeignKey(ProjectStatus, on_delete=models.CASCADE)
-    
+# -------------------------------------------------------------------------------------------------
+class ProjectPriority(models.Model):
+    priority_id = models.AutoField(primary_key=True)
+    priority = models.CharField(max_length=50)
+    priority_ar = models.CharField(max_length=50, blank=True, null=True)
+    color = models.CharField(max_length=7)  # Assuming color code in hexadecimal format
     class Meta:
-        verbose_name        = "Projects"
-        verbose_name_plural = "Projects"
-    
-    def __str__(self):
-        return self.name
-
-class ProjectMembers(models.Model):
-    project = models.ForeignKey(Projects, on_delete=models.CASCADE)
-    member = models.ForeignKey(Members, on_delete=models.CASCADE)
-    role = models.ForeignKey(Roles, on_delete=models.CASCADE)
-
-    class Meta:
-        unique_together = (("project", "member", "role"),)
-        verbose_name        = "Project Members"
-        verbose_name_plural = "Project Members"
+        verbose_name        = "Project Priority"
+        verbose_name_plural = "Project Priority"
 
     def __str__(self):
-        return f"{self.project} - {self.member} - {self.role}"
+        return self.priority
+# -------------------------------------------------------------------------------------------------
