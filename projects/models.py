@@ -9,7 +9,9 @@ class Portfolio(models.Model):
     portfolio_id = models.AutoField(primary_key=True)
 
     # Limitation: one portfolio cannot be associated with 2 Sectors.
-    sector = models.ForeignKey(Sector, on_delete=models.PROTECT) 
+    # a portfolio can be assigned to only 1 sector
+    # a portfolio can have no sector associated with it
+    # sector = models.ForeignKey(Sector, on_delete=models.PROTECT, blank=True, null=True) 
 
     name = models.CharField(max_length=100, blank=True, null=True)
     name_ar = models.CharField(max_length=100, blank=True, null=True)
@@ -23,9 +25,11 @@ class Portfolio(models.Model):
 class Program(models.Model):
     program_id = models.AutoField(primary_key=True)
     
-    portfolio = models.ForeignKey(Portfolio, on_delete=models.PROTECT)
+    portfolio = models.ForeignKey(Portfolio, on_delete=models.PROTECT, blank=True, null=True)
     # Limitation: one program cannot be associated with 2 departments.
-    department = models.ForeignKey(Department, on_delete=models.PROTECT) 
+    # a program can be assigned to only 1 department
+    # a program can have no department associated with it
+    # department = models.ForeignKey(Department, on_delete=models.PROTECT, blank=True, null=True) 
 
     name = models.CharField(max_length=100, blank=True, null=True)
     name_ar = models.CharField(max_length=100, blank=True, null=True)
@@ -39,9 +43,11 @@ class Program(models.Model):
 class Project(models.Model):
     project_id = models.AutoField(primary_key=True)
 
-    program = models.ForeignKey(Program, on_delete=models.PROTECT)
+    program = models.ForeignKey(Program, on_delete=models.PROTECT, blank=True, null=True)
     # Limitation: one project cannot be associated with 2 sections.
-    section = models.ForeignKey(Section, on_delete=models.PROTECT)
+    # a project can be assigned to only 1 section
+    # a project can have no section associated with it
+    # section = models.ForeignKey(Section, on_delete=models.PROTECT, blank=True, null=True)
 
     name = models.CharField(max_length=100)
     name_ar = models.CharField(max_length=100, blank=True, null=True)
@@ -64,6 +70,7 @@ class Project(models.Model):
         return self.name
 # -------------------------------------------------------------------------------------------------
 class ProjectUser(models.Model):
+    id = models.AutoField(primary_key=True)
     project = models.ForeignKey(Project, on_delete=models.PROTECT)
     user = models.ForeignKey(User, on_delete=models.PROTECT)
     role = models.ForeignKey(Role, on_delete=models.PROTECT)

@@ -1,5 +1,5 @@
 from django.db import models
-from organizations.models import Section
+from organizations.models import Team
 # Create your models here.
 class User(models.Model):
     user_id = models.AutoField(primary_key=True)
@@ -17,7 +17,7 @@ class User(models.Model):
     extension = models.CharField(max_length=100, blank=True, null=True)
     mobile = models.CharField(max_length=20)
 
-    section = models.ForeignKey(Section, on_delete=models.PROTECT, blank=True, null=True)
+    # team = models.ForeignKey(Team, on_delete=models.PROTECT, blank=True, null=True)
 
     class Meta:
         verbose_name        = "User"
