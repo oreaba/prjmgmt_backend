@@ -2,10 +2,15 @@ from django.db import models
 # Create your models here.
 from django.db import models
 from users.models import User, Role
+from organizations.models import Section, Department, Sector
 
 
 class Portfolio(models.Model):
     portfolio_id = models.AutoField(primary_key=True)
+
+    # Limitation: one portfolio cannot be associated with 2 Sectors.
+    sector = models.ForeignKey(Sector, on_delete=models.PROTECT) 
+
     name = models.CharField(max_length=100, blank=True, null=True)
     name_ar = models.CharField(max_length=100, blank=True, null=True)
     class Meta:
@@ -17,8 +22,11 @@ class Portfolio(models.Model):
 # -------------------------------------------------------------------------------------------------
 class Program(models.Model):
     program_id = models.AutoField(primary_key=True)
-    portfolio = models.ForeignKey(Portfolio, on_delete=models.PROTECT)
     
+    portfolio = models.ForeignKey(Portfolio, on_delete=models.PROTECT)
+    # Limitation: one program cannot be associated with 2 departments.
+    department = models.ForeignKey(Department, on_delete=models.PROTECT) 
+
     name = models.CharField(max_length=100, blank=True, null=True)
     name_ar = models.CharField(max_length=100, blank=True, null=True)
     class Meta:
@@ -30,7 +38,10 @@ class Program(models.Model):
 # -------------------------------------------------------------------------------------------------
 class Project(models.Model):
     project_id = models.AutoField(primary_key=True)
+
     program = models.ForeignKey(Program, on_delete=models.PROTECT)
+    # Limitation: one project cannot be associated with 2 sections.
+    section = models.ForeignKey(Section, on_delete=models.PROTECT)
 
     name = models.CharField(max_length=100)
     name_ar = models.CharField(max_length=100, blank=True, null=True)
