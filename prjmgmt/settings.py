@@ -79,22 +79,22 @@ WSGI_APPLICATION = 'prjmgmt.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.oracle',
-        'NAME': 'GISTEST',
-        'USER': 'sddprjmgmt',
-        'PASSWORD': 'PrjMgmt!23',
-        'HOST': '10.24.16.12', # Or the host where your Oracle database is located
-        'PORT': '1521', # Default Oracle port
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.oracle',
+#         'NAME': 'GISTEST',
+#         'USER': 'sddprjmgmt',
+#         'PASSWORD': 'PrjMgmt!23',
+#         'HOST': '10.24.16.12', # Or the host where your Oracle database is located
+#         'PORT': '1521', # Default Oracle port
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
