@@ -12,7 +12,7 @@ def login():
     except LDAPSocketOpenError as ex:
         print(f"Can not connect to remote server: {domain}")
     except LDAPBindError as ex:
-        print(f"Incorrect Credentials. {ex}")
+        print(f"Incorrect Credentials.")
     except Exception as ex:
         print(f"An error occurred: {ex}")
 
