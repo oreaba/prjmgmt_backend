@@ -31,6 +31,7 @@ class Role(models.Model):
     role = models.CharField(max_length=50)
     role_ar = models.CharField(max_length=50, blank=True, null=True)
     description = models.TextField(blank=True, null=True)
+    is_required = models.BooleanField(null=False, default = False)
 
     class Meta:
         verbose_name        = "Role"

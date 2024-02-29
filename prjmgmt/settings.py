@@ -10,14 +10,16 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
+# Quick-start development settings - unsuitable for production
+# See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
+
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
+
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-(u8+r-ug^y@k^3c)0*axybi*g526$5wq5&*3yzrdyzx$#1vb*3'
@@ -85,16 +87,16 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.oracle',
-#         'NAME': 'GISTEST',
-#         'USER': 'sddprjmgmt',
-#         'PASSWORD': 'PrjMgmt!23',
-#         'HOST': '10.24.16.12', # Or the host where your Oracle database is located
-#         'PORT': '1521', # Default Oracle port
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.oracle',
+        'NAME': 'GISTEST',
+        'USER': 'sddprjmgmt',
+        'PASSWORD': 'PrjMgmt!23',
+        'HOST': '10.24.16.12', # Or the host where your Oracle database is located
+        'PORT': '1521', # Default Oracle port
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
