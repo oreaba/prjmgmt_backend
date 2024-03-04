@@ -11,7 +11,9 @@ idna==3.6
 jmespath==1.0.1
 packaging==23.2
 pathspec==0.10.1
+pypiwin32==223
 python-dateutil==2.9.0.post0
+pywin32==306
 PyYAML==6.0.1
 requests==2.31.0
 semantic-version==2.8.5
