@@ -14,3 +14,8 @@ option_settings:
     WSGIPath: ebdjango.wsgi:application
     NumProcesses: 3
     NumThreads: 20
+
+
+option_settings:
+  aws:elasticbeanstalk:container:python:
+    WSGIPath: prjmgmt.wsgi:application
