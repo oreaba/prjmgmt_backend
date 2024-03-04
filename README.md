@@ -1,6 +1,8 @@
 # prjmgmt_backend
+# one liner ssh connect
     ssh -i "~/.ssh/adm-prjmgmt-aws-eb-key" ec2-user@ec2-157-175-205-15.me-south-1.compute.amazonaws.com
-
+# one liner deploy
+git add . && git commit -m "dev" && git push && eb deploy
 
 option_settings:
   aws:elasticbeanstalk:application:environment:
