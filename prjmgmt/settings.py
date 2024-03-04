@@ -27,7 +27,10 @@ SECRET_KEY = 'django-insecure-(u8+r-ug^y@k^3c)0*axybi*g526$5wq5&*3yzrdyzx$#1vb*3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1',]
+ALLOWED_HOSTS = [
+    '127.0.0.1',
+    'http://ad-m.eu-central-1.elasticbeanstalk.com/'
+    ]
 
 
 # Application definition
@@ -87,16 +90,16 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.oracle',
-        'NAME': 'GISTEST',
-        'USER': 'sddprjmgmt',
-        'PASSWORD': 'PrjMgmt!23',
-        'HOST': '10.24.16.12', # Or the host where your Oracle database is located
-        'PORT': '1521', # Default Oracle port
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.oracle',
+#         'NAME': 'GISTEST',
+#         'USER': 'sddprjmgmt',
+#         'PASSWORD': 'PrjMgmt!23',
+#         'HOST': '10.24.16.12', # Or the host where your Oracle database is located
+#         'PORT': '1521', # Default Oracle port
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
