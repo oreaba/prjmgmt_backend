@@ -99,7 +99,7 @@ class ProjectPriority(models.Model):
     priority_id = models.AutoField(primary_key=True)
     priority = models.CharField(max_length=50)
     priority_ar = models.CharField(max_length=50, blank=True, null=True)
-    # color = models.CharField(max_length=7)  # Assuming color code in hexadecimal format
+    color = models.CharField(max_length=7)  # Assuming color code in hexadecimal format
     class Meta:
         verbose_name        = "Project Priority"
         verbose_name_plural = "Project Priority"
