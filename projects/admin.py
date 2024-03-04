@@ -9,3 +9,7 @@ admin.site.register(ProjectPriority)
 admin.site.register(ProjectStatus)
 admin.site.register(ProjectUser)
 
+
+admin.site.site_header = "Project Management"
+admin.site.site_title = "Project Management"
+admin.site.index_title = "Welcome to Project Management Portal"
