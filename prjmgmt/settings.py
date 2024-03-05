@@ -104,12 +104,9 @@ class EnvType(Enum):
     
 ADM_PM_ENV = EnvType(os.getenv('ADM_PM_ENV', EnvType.PRODUCTION.value))
 SQL_FILE = '/efs-adm-pm-db-prod/adm-pm.db.sqlite3' # same as .ebextensions/env_variables.config - /efs-adm-pm-db-prod
-print('loading environment: ', ADM_PM_ENV)
-#--------------------------------------------------------------  
-
-# Path to SQL file
 if ADM_PM_ENV == EnvType.LOCAL: 
     SQL_FILE = f'{BASE_DIR}/local_db/adm-pm.db.sqlite3'
+print('loading environment: ', ADM_PM_ENV)
 
 print('Loading database at: ', SQL_FILE)
 # -----------------------------------------------------------
