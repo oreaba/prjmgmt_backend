@@ -24,8 +24,8 @@ class Command(BaseCommand):
                 raise ValueError("Password not found")
             User.objects.create_superuser(
                 username="oreaba",
-                email="email@xyz.com", 
-                password='password',
+                email="m.h.oreaba@gmail.com", 
+                password='@E000000',
             )
             print("Superuser has been created.")
         else:
