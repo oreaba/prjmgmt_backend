@@ -102,17 +102,15 @@ class EnvType(Enum):
     # def _missing_(cls, value: object) -> os.Any:
     #     return super()._missing_(cls.UNDEFINED)
     
-ADM_PM_ENV = EnvType(os.getenv('ADM_PM_ENV', EnvType.UNDEFINED.value))
+ADM_PM_ENV = EnvType(os.getenv('ADM_PM_ENV', EnvType.PRODUCTION.value))
+SQL_FILE = '/efs-adm-pm-db-prod/adm-pm.db.sqlite3' # same as .ebextensions/env_variables.config - /efs-adm-pm-db-prod
 print('loading environment: ', ADM_PM_ENV)
-#--------------------------------------------------------------
-    
-# ------------------------------------- AWS DB----------------
+#--------------------------------------------------------------  
+
 # Path to SQL file
-if ADM_PM_ENV == EnvType.PRODUCTION: 
-    SQL_FILE = os.getenv('EFS_MOUNT_DIR')+'/adm-pm.db.sqlite3' # check .ebextensions/env_variables.config - /efs-adm-pm-db-prod
-else:
+if ADM_PM_ENV == EnvType.LOCAL: 
     SQL_FILE = f'{BASE_DIR}/local_db/adm-pm.db.sqlite3'
-    
+
 print('Loading database at: ', SQL_FILE)
 # -----------------------------------------------------------
 DATABASES = {
