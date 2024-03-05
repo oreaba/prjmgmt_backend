@@ -4,10 +4,7 @@
 
 # class Command(BaseCommand):
 #     def handle(self, *args, **options):
-#         if not User.objects.filter(username='oreaba').exists():
-#             User.objects.create_superuser('oreaba',
-#                                           'm.h.oreaba@gmail.com',
-#                                           '@E000000')
+#         
 
 import os
 from django.contrib.auth.models import User
@@ -18,15 +15,10 @@ class Command(BaseCommand):
     help = "Creates a superuser."
 
     def handle(self, *args, **options):
-        if not User.objects.filter(username="oreaba").exists():
-            password = os.environ.get("SUPERUSER_PASSWORD")
-            if password is None:
-                raise ValueError("Password not found")
-            User.objects.create_superuser(
-                username="oreaba",
-                email="m.h.oreaba@gmail.com", 
-                password='@E000000',
-            )
+        if not User.objects.filter(username='admin').exists():
+            User.objects.create_superuser('admin',
+                                          'm.h.oreaba@gmail.com',
+                                          '@E000000')
             print("Superuser has been created.")
         else:
             print("Superuser exists")
