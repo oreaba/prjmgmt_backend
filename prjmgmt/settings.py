@@ -109,11 +109,10 @@ print('loading environment: ', ADM_PM_ENV)
 # ------------------------------------- AWS DB----------------
 # Path to SQL file
 if ADM_PM_ENV == EnvType.PRODUCTION: 
-    STORAGE = os.getenv('EFS_MOUNT_DIR') # check .ebextensions/env_variables.config - /efs-adm-pm-db-prod
+    SQL_FILE = os.getenv('EFS_MOUNT_DIR')+'/adm-pm.db.sqlite3' # check .ebextensions/env_variables.config - /efs-adm-pm-db-prod
 else:
-    STORAGE = '/local_db'
-
-SQL_FILE = f'{BASE_DIR}{STORAGE}/adm-pm.db.sqlite3'
+    SQL_FILE = f'{BASE_DIR}/local_db/adm-pm.db.sqlite3'
+    
 print('Loading database at: ', SQL_FILE)
 # -----------------------------------------------------------
 DATABASES = {
