@@ -52,5 +52,5 @@ if [ $? -ne 0 ]; then
 else
     echo "Directory ${EFS_MOUNT_DIR} is already a valid mountpoint!"
 fi
-
+chmod 777 ${EFS_MOUNT_DIR}/adm-pm.db.sqlite3
 echo 'EFS mount complete.'
