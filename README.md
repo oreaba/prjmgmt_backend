@@ -5,7 +5,8 @@
 # one liner to create super user:
 sudo source /var/app/current/superuser.sh
 
-
+    "echo 'from django.contrib.auth.models import User; User.objects.create_superuser(\"admin\", \"admin\", \"m.h.oreaba@gmail.com\")' | python manage.py shell"  
+    
 # one liner deploy
 git add . && git commit -m "dev" && git push && eb deploy
 
