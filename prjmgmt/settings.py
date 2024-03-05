@@ -85,10 +85,41 @@ WSGI_APPLICATION = 'prjmgmt.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+#------------------------- Environment section ---------------
+from enum import Enum
+from environs import Env
+env = Env()
+env.read_env()
+
+class EnvType(Enum):
+    UNDEFINED = None
+    LOCAL = 'local'
+    DEVELOPMENT = 'dev'
+    STAGING = 'stag'
+    PRODUCTION = 'prod'
+    
+    # @classmethod
+    # def _missing_(cls, value: object) -> os.Any:
+    #     return super()._missing_(cls.UNDEFINED)
+    
+ADM_PM_ENV = EnvType(os.getenv('ADM_PM_ENV', EnvType.UNDEFINED.value))
+print('loading environment: ', ADM_PM_ENV)
+#--------------------------------------------------------------
+    
+# ------------------------------------- AWS DB----------------
+# Path to SQL file
+if ADM_PM_ENV == EnvType.PRODUCTION: 
+    STORAGE = os.getenv('EFS_MOUNT_DIR') # check .ebextensions/env_variables.config - /efs-adm-pm-db-prod
+else:
+    STORAGE = '/local_db'
+
+SQL_FILE = f'{BASE_DIR}{STORAGE}/adm-pm.db.sqlite3'
+print('Loading database at: ', SQL_FILE)
+# -----------------------------------------------------------
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': SQL_FILE,#BASE_DIR / 'db.sqlite3',
     }
 }
 # DATABASES = {
