@@ -2,7 +2,8 @@
 # one liner ssh connect
     ssh -i "~/.ssh/adm-prjmgmt-aws-eb-key" ec2-user@ec2-157-175-207-193.me-south-1.compute.amazonaws.com
 
-
+# one liner to create super user:
+source /var/app/current/superuser.sh
 
 
 # one liner deploy
