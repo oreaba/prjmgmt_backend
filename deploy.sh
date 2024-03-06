@@ -1,3 +1,4 @@
+pip freeze > requirements.txt
 cp .env.prod .env
 git add .
 git commit -m "deploy"
