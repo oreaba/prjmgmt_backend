@@ -56,7 +56,6 @@ echo 'EFS mount complete.'
 
 
 echo "Applyging migrations and creating a new superuser"
-sudo chmod 777 ${EFS_MOUNT_DIR}/adm-pm.db.sqlite3
 source /var/app/venv/*/bin/activate
 cd /var/app/current/
 python manage.py makemigrations < <(yes y) && python manage.py migrate
