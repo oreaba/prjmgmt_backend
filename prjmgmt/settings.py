@@ -66,7 +66,7 @@ ROOT_URLCONF = 'prjmgmt.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates/')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -161,8 +161,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = 'static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_URL = 'static/' # defines the URL prefix for serving static files.
+STATIC_ROOT = os.path.join(BASE_DIR, 'static_files') #specifies the directory where collected static files will be stored.
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static_admin'),] # provides additional directories where static files will be collected from
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 

@@ -17,13 +17,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.http import JsonResponse
+from .admin import custom_admin_site
 
 def home(request):
     return JsonResponse({"System":'Project Management'})
 
 urlpatterns = [
     path('', home, name='prjmgmt-home'),
-    path('admin/', admin.site.urls),
+    # path('admin/', admin.site.urls),
+     path('admin/', custom_admin_site.urls),
     
     # internal Applications
     path('projects/', include('projects.urls')),

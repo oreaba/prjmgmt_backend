@@ -1,0 +1,21 @@
+{% extends "admin/base.html" %}
+{% load static %}
+
+{% block title %}{% if subtitle %}{{ subtitle }} | {% endif %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
+
+{% block extrahead %}
+<link rel="shortcut icon" type="image/x-icon" href="{% static 'favicon.ico' %}" sizes="48x48">
+    {% endblock %}
+
+{% block branding %}
+<div id="site-name">
+  <img src="{% static 'logo.png' %}" alt="AD_logo" width="50" height="50" >
+  <a href="{% url 'admin:index' %}" >{{ site_header|default:_('Django administration') }}</a>
+</div>
+{% if user.is_anonymous %}
+  {% include "admin/color_theme_toggle.html" %}
+{% endif %}
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
+
