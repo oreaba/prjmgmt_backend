@@ -27,7 +27,15 @@ class LoginView(APIView):
             user = authenticate(username=username, password=password)
             if user is not None:
                 # User authenticated
-                return Response({'detail': 'Login successful'}, status=status.HTTP_200_OK)
+                user_data = {
+                    'id': user.id,
+                    'username': user.username,
+                    'email': user.email,
+                    # Add more fields as needed
+                }
+                return Response({'detail': 'Login successful', 
+                                 'user': user_data
+                                 }, status=status.HTTP_200_OK)
             else:
                 # Authentication failed
                 return Response({'detail': 'Invalid username or password'}, status=status.HTTP_401_UNAUTHORIZED)
