@@ -1,10 +1,12 @@
 from django.db import models
+from django.contrib.auth.models import AbstractUser
+
 from organizations.models import Team
 # Create your models here.
-class User(models.Model):
+class User():#AbstractUser
     user_id = models.AutoField(primary_key=True)
     
-    username = models.CharField(max_length=100)
+    username = models.CharField(max_length=100, unique=True)
 
     firstname = models.CharField(max_length=100, blank=True, null=True)
     firstname_ar = models.CharField(max_length=100, blank=True, null=True)
