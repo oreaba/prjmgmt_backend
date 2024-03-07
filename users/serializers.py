@@ -1,7 +1,7 @@
 # serializers.py
 from rest_framework import serializers
 from .models import PMUser as User
-from django.utils import timezone
+# from django.utils import timezone
 
 
 class LoginSerializer(serializers.Serializer):
@@ -23,8 +23,8 @@ class UserProfileSerializer(serializers.ModelSerializer):
         #            'extension', 'mobile',
         #           ]  # Add more fields as needed
 
-    def get_last_login(self, obj):
-        if obj.last_login is not None:
-            local_last_login = obj.last_login.astimezone(timezone.get_current_timezone())
-            return local_last_login.strftime("%Y-%m-%dT%H:%M:%S.%f%z")
-        return None
+    # def get_last_login(self, obj):
+    #     if obj.last_login is not None:
+    #         local_last_login = obj.last_login.astimezone(timezone.get_current_timezone())
+    #         return local_last_login.strftime("%Y-%m-%dT%H:%M:%S.%f%z")
+    #     return None

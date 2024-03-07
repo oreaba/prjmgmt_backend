@@ -24,6 +24,7 @@ from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
 from users.authentication import BearerTokenAuthentication # to use 'Bearer' keyword instead of 'Token'
 
+from django.utils import timezone
 from django.contrib.auth.models import update_last_login
 
 from .serializers import UserProfileSerializer
@@ -64,8 +65,9 @@ class LoginView(APIView):
                 user_data = serializer.data
                 # return Response(serializer.data)
                 if last_login:
-                    user_data['last_login'] = last_login
-                    
+                    user_data['last_login'] = last_login.astimezone(timezone.get_current_timezone())
+                # return local_last_login.strftime("%Y-%m-%dT%H:%M:%S.%f%z")
+
                 update_last_login(None, token.user)
                 return Response({'detail': 'Login successful', 
                                  'token': token.key,
