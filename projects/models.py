@@ -2,8 +2,8 @@ from django.db import models
 # Create your models here.
 from django.db import models
 from users.models import  Role
-from django.contrib.auth.models import User
-
+# from django.contrib.auth.models import User
+from users.models import PMUser as User
 from organizations.models import Section, Department, Sector
 
 

@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     
     # framework applications
     'rest_framework',
+    'rest_framework.authtoken', # to issue tokens
 
     # internal applications
     'users',
@@ -176,4 +177,12 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static_admin'),] # provides addition
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-# AUTH_USER_MODEL = 'users.User'
+AUTH_USER_MODEL = 'users.PMUser'
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+        # Add other authentication classes if needed
+    ],
+}

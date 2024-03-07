@@ -3,19 +3,19 @@ from django.contrib.auth.models import AbstractUser
 
 from organizations.models import Team
 # Create your models here.
-class User():#AbstractUser
+class PMUser(AbstractUser):
     user_id = models.AutoField(primary_key=True)
     
     username = models.CharField(max_length=100, unique=True)
+    email = models.EmailField(unique=True)
 
     firstname = models.CharField(max_length=100, blank=True, null=True)
     firstname_ar = models.CharField(max_length=100, blank=True, null=True)
-    firstname = models.CharField(max_length=100, blank=True, null=True)
-    firstname_ar = models.CharField(max_length=100, blank=True, null=True)
-    title = models.CharField(max_length=100)
+    lastname = models.CharField(max_length=100, blank=True, null=True)
+    lastname_ar = models.CharField(max_length=100, blank=True, null=True)
+    title = models.CharField(max_length=100, blank=True, null=True)
     title_ar = models.CharField(max_length=100, blank=True, null=True)
 
-    email = models.EmailField(unique=True)
     extension = models.CharField(max_length=100, blank=True, null=True)
     mobile = models.CharField(max_length=20)
 
@@ -26,8 +26,9 @@ class User():#AbstractUser
         verbose_name_plural = "User"
 
     def __str__(self):
-        return self.name
+        return self.username
     
+
 class Role(models.Model):
     role_id = models.AutoField(primary_key=True)
     role = models.CharField(max_length=50)

@@ -1,29 +1,21 @@
 from django.contrib import admin
 from django.urls import path
 from .views import LoginView
-
+from rest_framework.authtoken import views
 
 from users.views import home
+from users.views import UserProfileAPIView
 
 urlpatterns = [
     path('', home, name='user-home'),
-    path('api/login', LoginView.as_view(), name='api-login'),
-   
+
+    # Default Djnago authentication
+    # path('api/login', LoginView.as_view(), name='api-login'),         # we just added token there - not needed for Default Django Authentication
+
+    # Default DRF authentication
+    path('api/token', views.obtain_auth_token, name='auth-token'),     # only drf token
+    path('api/login', LoginView.as_view(), name='login'),                       # drf token with custom fields
+    path('api/profile', UserProfileAPIView.as_view(), name='user-me'),
+    
+
 ]
-
-
-# # Custom title for your API documentation
-# api_info = openapi.Info(
-#     title="Your Custom API Title",
-#     default_version='v1',
-#     description="Your API description",
-#     terms_of_service="https://www.example.com/policies/terms/",
-#     contact=openapi.Contact(email="contact@example.com"),
-#     license=openapi.License(name="BSD License"),
-# )
-
-# schema_view = get_schema_view(
-#     api_info,
-#     public=True,
-#     permission_classes=(permissions.AllowAny,),
-# )
