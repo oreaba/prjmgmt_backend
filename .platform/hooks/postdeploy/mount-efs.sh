@@ -62,4 +62,4 @@ python manage.py makemigrations < <(yes y) && python manage.py migrate
 python manage.py loaddata data/users_pmuser.json
 sudo chmod 777 ${EFS_MOUNT_DIR}/adm-pm.db.sqlite3
 # python manage.py mysuperuser
-sudo chmod 777 ${EFS_MOUNT_DIR}/adm-pm.db.sqlite3
+# sudo chmod 777 ${EFS_MOUNT_DIR}/adm-pm.db.sqlite3

@@ -24,6 +24,8 @@ from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
 from users.authentication import BearerTokenAuthentication # to use 'Bearer' keyword instead of 'Token'
 
+from django.contrib.auth.models import update_last_login
+
 from .serializers import UserProfileSerializer
 # we use this login view to authenticate user Django's default
 # Added for DRF: create and return token for authenticated user
@@ -34,11 +36,18 @@ class LoginView(APIView):
         if serializer.is_valid():
             username = serializer.validated_data['username']
             password = serializer.validated_data['password']
-            # user = (User) (authenticate(username=username, password=password))
+            # last_login = None
+            try:
+                # Attempt to retrieve the user object using the provided username
+                user = User.objects.get(username=username)
+                # Now you can access the last_login attribute of the user
+                last_login = user.last_login
+            except User.DoesNotExist:
+                return None
             user = authenticate(username=username, password=password)
             
             
-            print(type(user))
+            # print(type(user))
             if user is not None:
                 # User authenticated
                 token, created = Token.objects.get_or_create(user=user)     # create token - drf
@@ -54,6 +63,10 @@ class LoginView(APIView):
                 serializer = UserProfileSerializer(user_profile)
                 user_data = serializer.data
                 # return Response(serializer.data)
+                if last_login:
+                    user_data['last_login'] = last_login
+                    
+                update_last_login(None, token.user)
                 return Response({'detail': 'Login successful', 
                                  'token': token.key,
                                  'user': user_data

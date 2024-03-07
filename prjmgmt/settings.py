@@ -189,6 +189,16 @@ REST_FRAMEWORK = {
 }
 
 AUTHENTICATION_BACKENDS = [
-    'django.contrib.auth.backends.ModelBackend',
+    # 'django.contrib.auth.backends.ModelBackend',
     # Add other authentication backends if needed
+     'users.authentication.PMUserBackend',
+    #  'django.contrib.auth.backends.ModelBackend',
+]
+
+# PASSWORD_HASHERS = [
+#     'django.contrib.auth.hashers.PBKDF2PasswordHasher',
+# ]
+
+CORSE_ALLOWED_ORIGINS = [
+    'http://localhost:4200',
 ]
