@@ -9,7 +9,7 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         if not PMUser.objects.filter(username='admin').exists():
             PMUser.objects.create_superuser('admin',
-                                          'm.h.oreaba@gmail.com',
+                                          'admin@admin.com',
                                           '@E000000')
             print("Superuser has been created.")
         else:

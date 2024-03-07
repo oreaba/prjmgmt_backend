@@ -17,7 +17,7 @@ class PMUser(AbstractUser):
     title_ar = models.CharField(max_length=100, blank=True, null=True)
 
     extension = models.CharField(max_length=100, blank=True, null=True)
-    mobile = models.CharField(max_length=20)
+    mobile = models.CharField(max_length=20, blank=True, null=True)
 
     # team = models.ForeignKey(Team, on_delete=models.PROTECT, blank=True, null=True)
 

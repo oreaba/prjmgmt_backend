@@ -44,9 +44,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     
-    # framework applications
-    'rest_framework',
-    'rest_framework.authtoken', # to issue tokens
 
     # internal applications
     'users',
@@ -54,6 +51,9 @@ INSTALLED_APPS = [
     'tasks',
     'organizations',
 
+    # framework applications
+    'rest_framework',
+    'rest_framework.authtoken', # to issue tokens
 
 ]
 
@@ -184,5 +184,11 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.TokenAuthentication',
         # Add other authentication classes if needed
+        # 'rest_framework.authentication.SessionAuthentication',
     ],
 }
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    # Add other authentication backends if needed
+]

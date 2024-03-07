@@ -1,0 +1,1 @@
+python manage.py dumpdata users.PMUser --indent 2 > users_pmuser.json
