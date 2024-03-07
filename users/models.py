@@ -9,10 +9,10 @@ class PMUser(AbstractUser):
     username = models.CharField(max_length=100, unique=True)
     email = models.EmailField(unique=True)
 
-    firstname = models.CharField(max_length=100, blank=True, null=True)
-    firstname_ar = models.CharField(max_length=100, blank=True, null=True)
-    lastname = models.CharField(max_length=100, blank=True, null=True)
-    lastname_ar = models.CharField(max_length=100, blank=True, null=True)
+    first_name = models.CharField(max_length=100, blank=True, null=True)
+    first_name_ar = models.CharField(max_length=100, blank=True, null=True)
+    last_name = models.CharField(max_length=100, blank=True, null=True)
+    last_name_ar = models.CharField(max_length=100, blank=True, null=True)
     title = models.CharField(max_length=100, blank=True, null=True)
     title_ar = models.CharField(max_length=100, blank=True, null=True)
 
