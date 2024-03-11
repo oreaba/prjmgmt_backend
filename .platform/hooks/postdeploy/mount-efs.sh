@@ -59,7 +59,7 @@ echo "Applyging migrations and creating a new superuser"
 source /var/app/venv/*/bin/activate
 cd /var/app/current/
 python manage.py makemigrations < <(yes y) && python manage.py migrate
-python manage.py loaddata data/users_pmuser.json
+python manage.py loaddata fixtures/*.json
 sudo chmod 777 ${EFS_MOUNT_DIR}/adm-pm.db.sqlite3
 # python manage.py mysuperuser
 # sudo chmod 777 ${EFS_MOUNT_DIR}/adm-pm.db.sqlite3
