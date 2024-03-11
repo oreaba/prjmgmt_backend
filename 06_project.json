@@ -1,0 +1,665 @@
+[
+{
+  "model": "projects.project",
+  "pk": 1,
+  "fields": {
+    "name": "Infra Asset (Asbuilt) Release 1",
+    "name_ar": null,
+    "description": "(Irrigation, Stormwater & Softlandcape)",
+    "start_date": "2024-03-11",
+    "end_date": "2024-03-11",
+    "status": 5,
+    "priority": 2,
+    "manager": 12,
+    "created_by": 4,
+    "created_at": "2024-03-11T10:14:41.846Z",
+    "updated_at": "2024-03-11T10:26:32.208Z"
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 2,
+  "fields": {
+    "name": "Dash Board (Khalifa City)",
+    "name_ar": null,
+    "description": "",
+    "start_date": "2024-03-11",
+    "end_date": "2024-03-11",
+    "status": 5,
+    "priority": 2,
+    "manager": 12,
+    "created_by": 1,
+    "created_at": "2024-03-11T10:17:19.248Z",
+    "updated_at": "2024-03-11T10:26:58.719Z"
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 3,
+  "fields": {
+    "name": "BDMS 4.1 Migration to ArcGIS 10.2",
+    "name_ar": null,
+    "description": "",
+    "start_date": null,
+    "end_date": null,
+    "status": 5,
+    "priority": 2,
+    "manager": 12,
+    "created_by": 1,
+    "created_at": "2024-03-11T10:27:21.622Z",
+    "updated_at": "2024-03-11T10:27:21.622Z"
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 4,
+  "fields": {
+    "name": "GEOBM Specification and Data Model",
+    "name_ar": null,
+    "description": "",
+    "start_date": null,
+    "end_date": null,
+    "status": 5,
+    "priority": 2,
+    "manager": 13,
+    "created_by": 1,
+    "created_at": "2024-03-11T10:27:35.503Z",
+    "updated_at": "2024-03-11T10:27:35.504Z"
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 5,
+  "fields": {
+    "name": "Infra Asset (Asbuilt) Release 2(Hard Landscape)",
+    "name_ar": null,
+    "description": "",
+    "start_date": null,
+    "end_date": null,
+    "status": 5,
+    "priority": 2,
+    "manager": 12,
+    "created_by": 1,
+    "created_at": "2024-03-11T10:27:51.983Z",
+    "updated_at": "2024-03-11T10:27:51.983Z"
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 6,
+  "fields": {
+    "name": "Development Areas (Phase-1)",
+    "name_ar": null,
+    "description": "",
+    "start_date": null,
+    "end_date": null,
+    "status": 5,
+    "priority": 2,
+    "manager": 12,
+    "created_by": 1,
+    "created_at": "2024-03-11T10:28:07.127Z",
+    "updated_at": "2024-03-11T10:28:07.127Z"
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 7,
+  "fields": {
+    "name": "CDP files in Makani",
+    "name_ar": null,
+    "description": "",
+    "start_date": null,
+    "end_date": null,
+    "status": 5,
+    "priority": 2,
+    "manager": 12,
+    "created_by": 1,
+    "created_at": "2024-03-11T10:28:33.815Z",
+    "updated_at": "2024-03-11T10:28:33.815Z"
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 8,
+  "fields": {
+    "name": "Survey Data Automation",
+    "name_ar": null,
+    "description": "",
+    "start_date": null,
+    "end_date": null,
+    "status": 5,
+    "priority": 2,
+    "manager": 12,
+    "created_by": 1,
+    "created_at": "2024-03-11T10:28:50.296Z",
+    "updated_at": "2024-03-11T10:28:50.296Z"
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 9,
+  "fields": {
+    "name": "Municipal Assets  (Phase-1)",
+    "name_ar": null,
+    "description": "",
+    "start_date": null,
+    "end_date": null,
+    "status": 5,
+    "priority": 2,
+    "manager": 12,
+    "created_by": 1,
+    "created_at": "2024-03-11T10:29:07.152Z",
+    "updated_at": "2024-03-11T10:29:07.152Z"
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 10,
+  "fields": {
+    "name": "Internal Dashboard Enhancements Phase 1",
+    "name_ar": null,
+    "description": "",
+    "start_date": null,
+    "end_date": null,
+    "status": 5,
+    "priority": 2,
+    "manager": 12,
+    "created_by": 1,
+    "created_at": "2024-03-11T10:29:22.471Z",
+    "updated_at": "2024-03-11T10:29:22.471Z"
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 11,
+  "fields": {
+    "name": "Real estate Dashboard",
+    "name_ar": null,
+    "description": "",
+    "start_date": null,
+    "end_date": null,
+    "status": 5,
+    "priority": 2,
+    "manager": 12,
+    "created_by": 1,
+    "created_at": "2024-03-11T10:29:35.263Z",
+    "updated_at": "2024-03-11T10:29:35.263Z"
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 12,
+  "fields": {
+    "name": "Infra Asset (Asbuilt) Release 2(Street Lightening)",
+    "name_ar": null,
+    "description": "",
+    "start_date": null,
+    "end_date": null,
+    "status": 5,
+    "priority": 2,
+    "manager": 12,
+    "created_by": 1,
+    "created_at": "2024-03-11T10:29:50.231Z",
+    "updated_at": "2024-03-11T10:29:50.231Z"
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 13,
+  "fields": {
+    "name": "KOFAX in MAKANI",
+    "name_ar": null,
+    "description": "",
+    "start_date": null,
+    "end_date": null,
+    "status": 5,
+    "priority": 2,
+    "manager": 12,
+    "created_by": 1,
+    "created_at": "2024-03-11T10:30:04.664Z",
+    "updated_at": "2024-03-11T10:30:04.664Z"
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 14,
+  "fields": {
+    "name": "Dashboard (Property Valuation)",
+    "name_ar": null,
+    "description": "",
+    "start_date": null,
+    "end_date": null,
+    "status": 5,
+    "priority": 2,
+    "manager": 12,
+    "created_by": 1,
+    "created_at": "2024-03-11T10:30:18.704Z",
+    "updated_at": "2024-03-11T10:30:18.704Z"
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 15,
+  "fields": {
+    "name": "Generate SHP files For UPD",
+    "name_ar": null,
+    "description": "",
+    "start_date": null,
+    "end_date": null,
+    "status": 5,
+    "priority": 2,
+    "manager": 12,
+    "created_by": 1,
+    "created_at": "2024-03-11T10:30:29.129Z",
+    "updated_at": "2024-03-11T10:30:29.129Z"
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 16,
+  "fields": {
+    "name": "Infra Asset (Design) Release 1 (Street Lightening,Roads)",
+    "name_ar": null,
+    "description": "",
+    "start_date": null,
+    "end_date": null,
+    "status": 5,
+    "priority": 2,
+    "manager": 12,
+    "created_by": 1,
+    "created_at": "2024-03-11T10:30:41.960Z",
+    "updated_at": "2024-03-11T10:30:41.960Z"
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 17,
+  "fields": {
+    "name": "Infra Asset (Design) Release 2 (Stormwater)",
+    "name_ar": null,
+    "description": "",
+    "start_date": null,
+    "end_date": null,
+    "status": 5,
+    "priority": 2,
+    "manager": 12,
+    "created_by": 1,
+    "created_at": "2024-03-11T10:30:54.888Z",
+    "updated_at": "2024-03-11T10:30:54.888Z"
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 18,
+  "fields": {
+    "name": "Dashboard (old Building Statistics)",
+    "name_ar": null,
+    "description": "",
+    "start_date": null,
+    "end_date": null,
+    "status": 5,
+    "priority": 2,
+    "manager": 12,
+    "created_by": 1,
+    "created_at": "2024-03-11T10:31:05.440Z",
+    "updated_at": "2024-03-11T10:31:05.440Z"
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 19,
+  "fields": {
+    "name": "SPS R1-Integration With ELMS",
+    "name_ar": null,
+    "description": "",
+    "start_date": null,
+    "end_date": null,
+    "status": 5,
+    "priority": 2,
+    "manager": 12,
+    "created_by": 1,
+    "created_at": "2024-03-11T10:31:33.369Z",
+    "updated_at": "2024-03-11T10:31:33.369Z"
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 20,
+  "fields": {
+    "name": "Infra Asset (Design) Release 3 (Hard & Soft Landscape)",
+    "name_ar": null,
+    "description": "",
+    "start_date": null,
+    "end_date": null,
+    "status": 5,
+    "priority": 2,
+    "manager": 12,
+    "created_by": 1,
+    "created_at": "2024-03-11T10:31:43.672Z",
+    "updated_at": "2024-03-11T10:31:43.672Z"
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 21,
+  "fields": {
+    "name": "Infra Asset (Design) Release 4 (Irrigation)",
+    "name_ar": null,
+    "description": "",
+    "start_date": null,
+    "end_date": null,
+    "status": 5,
+    "priority": 2,
+    "manager": 12,
+    "created_by": 1,
+    "created_at": "2024-03-11T10:31:55.319Z",
+    "updated_at": "2024-03-11T10:31:55.319Z"
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 22,
+  "fields": {
+    "name": "Infrastructure files for bridge",
+    "name_ar": null,
+    "description": "",
+    "start_date": null,
+    "end_date": null,
+    "status": 5,
+    "priority": 2,
+    "manager": 12,
+    "created_by": 1,
+    "created_at": "2024-03-11T10:32:13.952Z",
+    "updated_at": "2024-03-11T10:32:13.952Z"
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 23,
+  "fields": {
+    "name": "Tools for RFI preparation for UPD",
+    "name_ar": null,
+    "description": "",
+    "start_date": null,
+    "end_date": null,
+    "status": 5,
+    "priority": 2,
+    "manager": 12,
+    "created_by": 1,
+    "created_at": "2024-03-11T10:32:28.136Z",
+    "updated_at": "2024-03-11T10:32:28.136Z"
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 24,
+  "fields": {
+    "name": "Demolition In MAKANI",
+    "name_ar": null,
+    "description": "",
+    "start_date": null,
+    "end_date": null,
+    "status": 5,
+    "priority": 2,
+    "manager": 12,
+    "created_by": 1,
+    "created_at": "2024-03-11T10:32:41.697Z",
+    "updated_at": "2024-03-11T10:32:41.697Z"
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 25,
+  "fields": {
+    "name": "Building BOC Dashboard Phase 2",
+    "name_ar": null,
+    "description": "",
+    "start_date": null,
+    "end_date": null,
+    "status": 5,
+    "priority": 2,
+    "manager": 12,
+    "created_by": 1,
+    "created_at": "2024-03-11T10:32:53.272Z",
+    "updated_at": "2024-03-11T10:32:53.272Z"
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 26,
+  "fields": {
+    "name": "Dashboard MIMS (Issues & Tracking)",
+    "name_ar": null,
+    "description": "",
+    "start_date": null,
+    "end_date": null,
+    "status": 5,
+    "priority": 2,
+    "manager": 12,
+    "created_by": 1,
+    "created_at": "2024-03-11T10:33:04.183Z",
+    "updated_at": "2024-03-11T10:33:04.183Z"
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 27,
+  "fields": {
+    "name": "Dashboard Trade Building Statistics",
+    "name_ar": null,
+    "description": "",
+    "start_date": null,
+    "end_date": null,
+    "status": 5,
+    "priority": 2,
+    "manager": 12,
+    "created_by": 1,
+    "created_at": "2024-03-11T10:33:19.120Z",
+    "updated_at": "2024-03-11T10:33:19.120Z"
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 28,
+  "fields": {
+    "name": "New Addressing in MAKANI",
+    "name_ar": null,
+    "description": "",
+    "start_date": null,
+    "end_date": null,
+    "status": 5,
+    "priority": 2,
+    "manager": 12,
+    "created_by": 1,
+    "created_at": "2024-03-11T10:33:30.793Z",
+    "updated_at": "2024-03-11T10:33:30.793Z"
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 29,
+  "fields": {
+    "name": "Crane Proposal Submission",
+    "name_ar": null,
+    "description": "",
+    "start_date": null,
+    "end_date": null,
+    "status": 5,
+    "priority": 2,
+    "manager": 12,
+    "created_by": 1,
+    "created_at": "2024-03-11T10:33:43.135Z",
+    "updated_at": "2024-03-11T10:33:43.135Z"
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 30,
+  "fields": {
+    "name": "MAKANI Integration with NCMS",
+    "name_ar": null,
+    "description": "",
+    "start_date": null,
+    "end_date": null,
+    "status": 5,
+    "priority": 2,
+    "manager": 12,
+    "created_by": 1,
+    "created_at": "2024-03-11T10:33:52.680Z",
+    "updated_at": "2024-03-11T10:33:52.680Z"
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 31,
+  "fields": {
+    "name": "ADHA Application Migration",
+    "name_ar": null,
+    "description": "",
+    "start_date": null,
+    "end_date": null,
+    "status": 5,
+    "priority": 2,
+    "manager": 12,
+    "created_by": 1,
+    "created_at": "2024-03-11T10:34:03.368Z",
+    "updated_at": "2024-03-11T10:34:03.368Z"
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 32,
+  "fields": {
+    "name": "Investment contracts in MAKANI",
+    "name_ar": null,
+    "description": "",
+    "start_date": null,
+    "end_date": null,
+    "status": 5,
+    "priority": 2,
+    "manager": 12,
+    "created_by": 1,
+    "created_at": "2024-03-11T10:34:16.528Z",
+    "updated_at": "2024-03-11T10:34:16.528Z"
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 33,
+  "fields": {
+    "name": "Design Section MEPS services in MAKANI",
+    "name_ar": null,
+    "description": "",
+    "start_date": null,
+    "end_date": null,
+    "status": 5,
+    "priority": 2,
+    "manager": 12,
+    "created_by": 1,
+    "created_at": "2024-03-11T10:34:28.151Z",
+    "updated_at": "2024-03-11T10:34:28.151Z"
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 34,
+  "fields": {
+    "name": "GEOBM Phase 1",
+    "name_ar": null,
+    "description": "",
+    "start_date": null,
+    "end_date": null,
+    "status": 5,
+    "priority": 2,
+    "manager": 12,
+    "created_by": 1,
+    "created_at": "2024-03-11T10:34:39.911Z",
+    "updated_at": "2024-03-11T10:34:39.911Z"
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 35,
+  "fields": {
+    "name": "Elms update",
+    "name_ar": null,
+    "description": "",
+    "start_date": null,
+    "end_date": null,
+    "status": 5,
+    "priority": 2,
+    "manager": 12,
+    "created_by": 1,
+    "created_at": "2024-03-11T10:34:51.599Z",
+    "updated_at": "2024-03-11T10:34:51.599Z"
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 36,
+  "fields": {
+    "name": "Maintenance Contracts in MAKANI",
+    "name_ar": null,
+    "description": "",
+    "start_date": null,
+    "end_date": null,
+    "status": 5,
+    "priority": 2,
+    "manager": 12,
+    "created_by": 1,
+    "created_at": "2024-03-11T10:35:04.608Z",
+    "updated_at": "2024-03-11T10:35:04.608Z"
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 37,
+  "fields": {
+    "name": "Integration with Tadweer",
+    "name_ar": null,
+    "description": "",
+    "start_date": null,
+    "end_date": null,
+    "status": 5,
+    "priority": 2,
+    "manager": 12,
+    "created_by": 1,
+    "created_at": "2024-03-11T10:35:13.096Z",
+    "updated_at": "2024-03-11T10:35:13.096Z"
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 38,
+  "fields": {
+    "name": "New Dashboard for MIMS",
+    "name_ar": null,
+    "description": "",
+    "start_date": null,
+    "end_date": null,
+    "status": 5,
+    "priority": 2,
+    "manager": 12,
+    "created_by": 1,
+    "created_at": "2024-03-11T10:35:21.016Z",
+    "updated_at": "2024-03-11T10:35:21.016Z"
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 39,
+  "fields": {
+    "name": "Integration with DED( commercial Licenses)",
+    "name_ar": null,
+    "description": "",
+    "start_date": null,
+    "end_date": null,
+    "status": 5,
+    "priority": 2,
+    "manager": 12,
+    "created_by": 1,
+    "created_at": "2024-03-11T10:35:31.199Z",
+    "updated_at": "2024-03-11T10:35:31.200Z"
+  }
+}
+]

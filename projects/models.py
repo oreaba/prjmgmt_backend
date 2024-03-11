@@ -45,7 +45,7 @@ class Program(models.Model):
 class Project(models.Model):
     project_id = models.AutoField(primary_key=True)
 
-    program = models.ForeignKey(Program, on_delete=models.PROTECT, blank=True, null=True)
+    # program = models.ForeignKey(Program, on_delete=models.PROTECT, blank=True, null=True)
     # Limitation: one project cannot be associated with 2 sections.
     # a project can be assigned to only 1 section
     # a project can have no section associated with it
@@ -66,10 +66,11 @@ class Project(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     class Meta:
         verbose_name        = "Project"
-        verbose_name_plural = "Project"
+        verbose_name_plural = "Projects"
     
     def __str__(self):
         return self.name
+
 # -------------------------------------------------------------------------------------------------
 class ProjectUser(models.Model):
     id = models.AutoField(primary_key=True)

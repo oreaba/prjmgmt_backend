@@ -1,0 +1,29 @@
+[
+{
+  "model": "projects.projectpriority",
+  "pk": 1,
+  "fields": {
+    "priority": "LOW",
+    "priority_ar": null,
+    "color": "grey"
+  }
+},
+{
+  "model": "projects.projectpriority",
+  "pk": 2,
+  "fields": {
+    "priority": "NORMAL",
+    "priority_ar": null,
+    "color": "yellow"
+  }
+},
+{
+  "model": "projects.projectpriority",
+  "pk": 3,
+  "fields": {
+    "priority": "HIGH",
+    "priority_ar": null,
+    "color": "red"
+  }
+}
+]

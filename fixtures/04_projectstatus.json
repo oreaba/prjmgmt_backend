@@ -1,0 +1,56 @@
+[
+{
+  "model": "projects.projectstatus",
+  "pk": 1,
+  "fields": {
+    "status": "Planned",
+    "status_ar": null,
+    "color": "Blue"
+  }
+},
+{
+  "model": "projects.projectstatus",
+  "pk": 2,
+  "fields": {
+    "status": "In Progress",
+    "status_ar": null,
+    "color": "Orange"
+  }
+},
+{
+  "model": "projects.projectstatus",
+  "pk": 3,
+  "fields": {
+    "status": "Waiting",
+    "status_ar": null,
+    "color": "yellow"
+  }
+},
+{
+  "model": "projects.projectstatus",
+  "pk": 4,
+  "fields": {
+    "status": "On Hold",
+    "status_ar": null,
+    "color": "grey"
+  }
+},
+{
+  "model": "projects.projectstatus",
+  "pk": 5,
+  "fields": {
+    "status": "Completed",
+    "status_ar": null,
+    "color": "green"
+  }
+},
+{
+  "model": "projects.projectstatus",
+  "pk": 6,
+  "fields": {
+    "status": "Cancelled",
+    "status_ar": null,
+    "color": "red"
+  }
+}
+]
