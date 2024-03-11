@@ -18,6 +18,10 @@ from django.contrib import admin
 from django.urls import path, include
 from django.http import JsonResponse
 # from .admin import custom_admin_site
+from rest_framework.routers import DefaultRouter
+from users import views as user_views
+router = DefaultRouter()
+# router.register(r'users', user_views.UserViewSet, basename='user')
 
 def home(request):
     return JsonResponse({"System":'Project Management'})
@@ -28,7 +32,9 @@ urlpatterns = [
     #  path('admin/', custom_admin_site.urls),
     
     # internal Applications
+    # path('api/', include(router.urls)),
+    path('api/users/', include('users.urls')),
     path('projects/', include('projects.urls')),
-    path('users/', include('users.urls')),
+    # path('users/', include('users.urls')),
 
 ]

@@ -30,7 +30,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
-    'adm-pm.me-south-1.elasticbeanstalk.com'
+    'adm-pm.me-south-1.elasticbeanstalk.com',
+    'www.adm-pm.me-south-1.elasticbeanstalk.com',
     ]
 
 

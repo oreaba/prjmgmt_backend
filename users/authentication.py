@@ -1,7 +1,7 @@
 # to replace 'Token' with 'Bearer'
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.exceptions import AuthenticationFailed
-from django.contrib.auth.models import update_last_login
+# from django.contrib.auth.models import update_last_login
 
 class BearerTokenAuthentication(TokenAuthentication):
     """to replace 'Token' with 'Bearer'"""

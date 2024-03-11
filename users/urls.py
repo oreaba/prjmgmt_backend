@@ -13,9 +13,9 @@ urlpatterns = [
     # path('api/login', LoginView.as_view(), name='api-login'),         # we just added token there - not needed for Default Django Authentication
 
     # Default DRF authentication
-    path('api/token', views.obtain_auth_token, name='auth-token'),     # only drf token
-    path('api/login', LoginView.as_view(), name='login'),                       # drf token with custom fields
-    path('api/profile', UserProfileAPIView.as_view(), name='user-me'),
+    path('token', views.obtain_auth_token, name='auth-token'),     # only drf token
+    path('login', LoginView.as_view(), name='login'),                       # drf token with custom fields
+    path('profile', UserProfileAPIView.as_view(), name='user-me'),
     
 
 ]
