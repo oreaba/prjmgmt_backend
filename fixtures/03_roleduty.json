@@ -1,0 +1,256 @@
+loading environment:  EnvType.LOCAL
+Loading database at:  D:\prjmgmt_backend/local_db/adm-pm.db.sqlite3
+[
+{
+  "model": "users.roleduty",
+  "pk": 1,
+  "fields": {
+    "duty": "Provide guidance to the team with respect to project expectations, priorities etc. in order to meet department vision and objectives",
+    "duty_ar": null,
+    "role": 1
+  }
+},
+{
+  "model": "users.roleduty",
+  "pk": 2,
+  "fields": {
+    "duty": "1. Supervise the development and implementation of GIS Projects",
+    "duty_ar": null,
+    "role": 2
+  }
+},
+{
+  "model": "users.roleduty",
+  "pk": 3,
+  "fields": {
+    "duty": "2. Guide the entire implementation team during the project implementation aligning with department vision and objectives.",
+    "duty_ar": null,
+    "role": 2
+  }
+},
+{
+  "model": "users.roleduty",
+  "pk": 4,
+  "fields": {
+    "duty": "3. Present project status, expected outputs to management as and when required",
+    "duty_ar": null,
+    "role": 2
+  }
+},
+{
+  "model": "users.roleduty",
+  "pk": 5,
+  "fields": {
+    "duty": "1. Responsible for managing the assigned GIS Project",
+    "duty_ar": null,
+    "role": 3
+  }
+},
+{
+  "model": "users.roleduty",
+  "pk": 6,
+  "fields": {
+    "duty": "2. Primary point of contact for project queries and presentations",
+    "duty_ar": null,
+    "role": 3
+  }
+},
+{
+  "model": "users.roleduty",
+  "pk": 7,
+  "fields": {
+    "duty": "3. Responsible for aligning with requirements from Primary Point Of Contact",
+    "duty_ar": null,
+    "role": 3
+  }
+},
+{
+  "model": "users.roleduty",
+  "pk": 8,
+  "fields": {
+    "duty": "4. Provide weekly and on demand project status to the  management",
+    "duty_ar": null,
+    "role": 3
+  }
+},
+{
+  "model": "users.roleduty",
+  "pk": 9,
+  "fields": {
+    "duty": "5. Coordinating with stakeholders during project execuition",
+    "duty_ar": null,
+    "role": 3
+  }
+},
+{
+  "model": "users.roleduty",
+  "pk": 10,
+  "fields": {
+    "duty": "6. Supervising entire project implementation",
+    "duty_ar": null,
+    "role": 3
+  }
+},
+{
+  "model": "users.roleduty",
+  "pk": 11,
+  "fields": {
+    "duty": "7. Plan centralized storage for managing output and deliveries of the projects",
+    "duty_ar": null,
+    "role": 3
+  }
+},
+{
+  "model": "users.roleduty",
+  "pk": 12,
+  "fields": {
+    "duty": "1. Primary point of contact for providing project requirements to Primary TL",
+    "duty_ar": null,
+    "role": 4
+  }
+},
+{
+  "model": "users.roleduty",
+  "pk": 13,
+  "fields": {
+    "duty": "2. Supporting Primary TL in coordinating with stakeholders and project inputs",
+    "duty_ar": null,
+    "role": 4
+  }
+},
+{
+  "model": "users.roleduty",
+  "pk": 14,
+  "fields": {
+    "duty": "3. Active participation in reviewing and approving project deliveries",
+    "duty_ar": null,
+    "role": 4
+  }
+},
+{
+  "model": "users.roleduty",
+  "pk": 15,
+  "fields": {
+    "duty": "4. Active participation for UAT (User Acceptance Testing)",
+    "duty_ar": null,
+    "role": 4
+  }
+},
+{
+  "model": "users.roleduty",
+  "pk": 16,
+  "fields": {
+    "duty": "5. Providing all necessary support to Primary TL for timely implementing of the project",
+    "duty_ar": null,
+    "role": 4
+  }
+},
+{
+  "model": "users.roleduty",
+  "pk": 17,
+  "fields": {
+    "duty": "6. Responding to business queries from the management as and when needed in coordination with Primary TL (e.g. status, presentation etc.)",
+    "duty_ar": null,
+    "role": 4
+  }
+},
+{
+  "model": "users.roleduty",
+  "pk": 18,
+  "fields": {
+    "duty": "Support Point of Contact #1 during his/her unavailability",
+    "duty_ar": null,
+    "role": 5
+  }
+},
+{
+  "model": "users.roleduty",
+  "pk": 19,
+  "fields": {
+    "duty": "1. Developer primary responsible for development and implementation",
+    "duty_ar": null,
+    "role": 6
+  }
+},
+{
+  "model": "users.roleduty",
+  "pk": 20,
+  "fields": {
+    "duty": "2. Perform tasks as per the directions of the team leader",
+    "duty_ar": null,
+    "role": 6
+  }
+},
+{
+  "model": "users.roleduty",
+  "pk": 21,
+  "fields": {
+    "duty": "3. Respond to queries related to development and implementation",
+    "duty_ar": null,
+    "role": 6
+  }
+},
+{
+  "model": "users.roleduty",
+  "pk": 22,
+  "fields": {
+    "duty": "1. Developer responsible for development and implementation",
+    "duty_ar": null,
+    "role": 7
+  }
+},
+{
+  "model": "users.roleduty",
+  "pk": 23,
+  "fields": {
+    "duty": "2. Perform tasks as per the directions of the team leader",
+    "duty_ar": null,
+    "role": 7
+  }
+},
+{
+  "model": "users.roleduty",
+  "pk": 24,
+  "fields": {
+    "duty": "3. Respond to queries related to development and implementation during unavailability of Main Developer #1",
+    "duty_ar": null,
+    "role": 7
+  }
+},
+{
+  "model": "users.roleduty",
+  "pk": 25,
+  "fields": {
+    "duty": "1. Responsible for developing documentaton for the concerned project as per the instructions from the TL",
+    "duty_ar": null,
+    "role": 8
+  }
+},
+{
+  "model": "users.roleduty",
+  "pk": 26,
+  "fields": {
+    "duty": "2.The assigned team member under database team will be responsible for database documentation",
+    "duty_ar": null,
+    "role": 8
+  }
+},
+{
+  "model": "users.roleduty",
+  "pk": 27,
+  "fields": {
+    "duty": "3.The assigned team member under application team will be responsible for application documentation",
+    "duty_ar": null,
+    "role": 8
+  }
+},
+{
+  "model": "users.roleduty",
+  "pk": 28,
+  "fields": {
+    "duty": "4.The Primary TL and Responsible Developer (RD) should include documentation in their implementation plans",
+    "duty_ar": null,
+    "role": 8
+  }
+}
+]

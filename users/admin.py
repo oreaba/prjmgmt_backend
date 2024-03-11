@@ -3,6 +3,10 @@ from .models import Role, RoleDuty
 from django.contrib.auth.models import User
 from users.models import PMUser #as User
 from django.contrib.auth.admin import UserAdmin
+
+from django.forms import inlineformset_factory
+from users.forms import RoleDutyForm
+
 # Register your models here.
 class PMUserAdmin(UserAdmin):
     fieldsets = (
@@ -20,6 +24,19 @@ class PMUserAdmin(UserAdmin):
                         'title', 'title_ar', 'extension', 'mobile',),
         }),
     )
+
+   
 admin.site.register(PMUser, PMUserAdmin)    # without adding PMUserAdmin, it will store plain password and it will not show the additional fields in the admin panel
-admin.site.register(Role)
-admin.site.register(RoleDuty)
+
+# admin.site.register(Role)
+# admin.site.register(RoleDuty)
+
+
+# RoleDutyFormSet = inlineformset_factory(Role, RoleDuty, form=RoleDutyForm, extra=1)
+class RoleDutyInline(admin.TabularInline):
+    model = RoleDuty
+    # formset = RoleDutyFormSet
+
+@admin.register(Role)
+class RoleAdmin(admin.ModelAdmin):
+    inlines = [RoleDutyInline]

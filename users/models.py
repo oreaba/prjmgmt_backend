@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
+from django import forms
+
 
 from organizations.models import Team
 # Create your models here.
@@ -45,13 +47,14 @@ class Role(models.Model):
 
 class RoleDuty(models.Model):
     duty_id = models.AutoField(primary_key=True)
-    duty = models.CharField(max_length=100)
-    duty_ar = models.CharField(max_length=100, blank=True, null=True)
+    duty = models.CharField(max_length=255)
+    duty_ar = models.CharField(max_length=255, blank=True, null=True)
     role = models.ForeignKey(Role, on_delete=models.PROTECT)
 
     class Meta:
         verbose_name        = "Role Duty"
         verbose_name_plural = "Role Duty"
+        
 
     def __str__(self):
         return self.duty

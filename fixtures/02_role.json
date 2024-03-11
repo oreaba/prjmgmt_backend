@@ -1,0 +1,84 @@
+loading environment:  EnvType.LOCAL
+Loading database at:  D:\prjmgmt_backend/local_db/adm-pm.db.sqlite3
+[
+{
+  "model": "users.role",
+  "pk": 1,
+  "fields": {
+    "role": "SDD Director",
+    "role_ar": null,
+    "description": "",
+    "is_required": false
+  }
+},
+{
+  "model": "users.role",
+  "pk": 2,
+  "fields": {
+    "role": "Head Of GIS Section",
+    "role_ar": null,
+    "description": "",
+    "is_required": false
+  }
+},
+{
+  "model": "users.role",
+  "pk": 3,
+  "fields": {
+    "role": "Primary Team Lead",
+    "role_ar": null,
+    "description": "",
+    "is_required": false
+  }
+},
+{
+  "model": "users.role",
+  "pk": 4,
+  "fields": {
+    "role": "Point of Contact #1",
+    "role_ar": null,
+    "description": "",
+    "is_required": false
+  }
+},
+{
+  "model": "users.role",
+  "pk": 5,
+  "fields": {
+    "role": "Point of Contact #2",
+    "role_ar": null,
+    "description": "",
+    "is_required": false
+  }
+},
+{
+  "model": "users.role",
+  "pk": 6,
+  "fields": {
+    "role": "Main Developer #1",
+    "role_ar": null,
+    "description": "",
+    "is_required": false
+  }
+},
+{
+  "model": "users.role",
+  "pk": 7,
+  "fields": {
+    "role": "Main Developer #2",
+    "role_ar": null,
+    "description": "",
+    "is_required": false
+  }
+},
+{
+  "model": "users.role",
+  "pk": 8,
+  "fields": {
+    "role": "Documenter",
+    "role_ar": null,
+    "description": "Documenter",
+    "is_required": false
+  }
+}
+]
