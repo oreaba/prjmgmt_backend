@@ -4,6 +4,10 @@ from django.http import JsonResponse
 from utils.query import Query
 from utils.query_executor import QueryExecutor
 
+from .models import Project
+from .serializers import ProjectSerializer
+from rest_framework.generics import ListAPIView
+
 
 def home(request):
     return JsonResponse({"app":'projects'})
@@ -23,3 +27,9 @@ def build(request):
         # results[query.name] = qe.to_decimal()
         # print(results[query.name])
     return JsonResponse(results)
+
+
+
+class ProjectListAPIView(ListAPIView):
+    queryset = Project.objects.all()
+    serializer_class = ProjectSerializer
