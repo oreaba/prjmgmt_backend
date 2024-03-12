@@ -13,37 +13,37 @@ from django.db import models
 # on portfolio level
 class Organization(models.Model):
     organization_id = models.AutoField(primary_key=True)
-    name = models.CharField(max_length=100, blank=True, null=True)
-    name_ar = models.CharField(max_length=100, blank=True, null=True)
+    name = models.CharField(max_length=100, default='')
+    name_ar = models.CharField(max_length=100, default='')
 # -------------------------------------------------------------------------------------------------
 
 # on program level
 class Sector(models.Model):
     sector_id = models.AutoField(primary_key=True)
-    name = models.CharField(max_length=100, blank=True, null=True)
-    name_ar = models.CharField(max_length=100, blank=True, null=True)
+    name = models.CharField(max_length=100, default='')
+    name_ar = models.CharField(max_length=100, default='')
     organization = models.ForeignKey(Organization, on_delete=models.PROTECT, blank=True, null=True)
 # -------------------------------------------------------------------------------------------------
 
 # on project levels
 class Department(models.Model):
     department_id = models.AutoField(primary_key=True)
-    name = models.CharField(max_length=100, blank=True, null=True)
-    name_ar = models.CharField(max_length=100, blank=True, null=True)
+    name = models.CharField(max_length=100, default='')
+    name_ar = models.CharField(max_length=100, default='')
     sector = models.ForeignKey(Sector, on_delete=models.PROTECT, blank=True, null=True)
 # -------------------------------------------------------------------------------------------------
 
 class Section(models.Model): 
     section_id = models.AutoField(primary_key=True)
-    name = models.CharField(max_length=100, blank=True, null=True)
-    name_ar = models.CharField(max_length=100, blank=True, null=True)
+    name = models.CharField(max_length=100, default='')
+    name_ar = models.CharField(max_length=100, default='')
     department = models.ForeignKey(Department, on_delete=models.PROTECT, blank=True, null=True)
 # -------------------------------------------------------------------------------------------------
 
 class Team(models.Model): 
     team_id = models.AutoField(primary_key=True)
-    name = models.CharField(max_length=100, blank=True, null=True)
-    name_ar = models.CharField(max_length=100, blank=True, null=True)
+    name = models.CharField(max_length=100, default='')
+    name_ar = models.CharField(max_length=100, default='')
     section = models.ForeignKey(Section, on_delete=models.PROTECT, blank=True, null=True)
 # -------------------------------------------------------------------------------------------------
 
