@@ -4,7 +4,7 @@
   "pk": 1,
   "fields": {
     "name": "Infra Asset (Asbuilt) Release 1",
-    "name_ar": null,
+    "name_ar": "",
     "description": "(Irrigation, Stormwater & Softlandcape)",
     "start_date": "2024-03-11",
     "end_date": "2024-03-11",
@@ -21,7 +21,7 @@
   "pk": 2,
   "fields": {
     "name": "Dash Board (Khalifa City)",
-    "name_ar": null,
+    "name_ar": "",
     "description": "",
     "start_date": "2024-03-11",
     "end_date": "2024-03-11",
@@ -38,7 +38,7 @@
   "pk": 3,
   "fields": {
     "name": "BDMS 4.1 Migration to ArcGIS 10.2",
-    "name_ar": null,
+    "name_ar": "",
     "description": "",
     "start_date": null,
     "end_date": null,
@@ -55,7 +55,7 @@
   "pk": 4,
   "fields": {
     "name": "GEOBM Specification and Data Model",
-    "name_ar": null,
+    "name_ar": "",
     "description": "",
     "start_date": null,
     "end_date": null,
@@ -72,7 +72,7 @@
   "pk": 5,
   "fields": {
     "name": "Infra Asset (Asbuilt) Release 2(Hard Landscape)",
-    "name_ar": null,
+    "name_ar": "",
     "description": "",
     "start_date": null,
     "end_date": null,
@@ -89,7 +89,7 @@
   "pk": 6,
   "fields": {
     "name": "Development Areas (Phase-1)",
-    "name_ar": null,
+    "name_ar": "",
     "description": "",
     "start_date": null,
     "end_date": null,
@@ -106,7 +106,7 @@
   "pk": 7,
   "fields": {
     "name": "CDP files in Makani",
-    "name_ar": null,
+    "name_ar": "",
     "description": "",
     "start_date": null,
     "end_date": null,
@@ -123,7 +123,7 @@
   "pk": 8,
   "fields": {
     "name": "Survey Data Automation",
-    "name_ar": null,
+    "name_ar": "",
     "description": "",
     "start_date": null,
     "end_date": null,
@@ -140,7 +140,7 @@
   "pk": 9,
   "fields": {
     "name": "Municipal Assets  (Phase-1)",
-    "name_ar": null,
+    "name_ar": "",
     "description": "",
     "start_date": null,
     "end_date": null,
@@ -157,7 +157,7 @@
   "pk": 10,
   "fields": {
     "name": "Internal Dashboard Enhancements Phase 1",
-    "name_ar": null,
+    "name_ar": "",
     "description": "",
     "start_date": null,
     "end_date": null,
@@ -174,7 +174,7 @@
   "pk": 11,
   "fields": {
     "name": "Real estate Dashboard",
-    "name_ar": null,
+    "name_ar": "",
     "description": "",
     "start_date": null,
     "end_date": null,
@@ -191,7 +191,7 @@
   "pk": 12,
   "fields": {
     "name": "Infra Asset (Asbuilt) Release 2(Street Lightening)",
-    "name_ar": null,
+    "name_ar": "",
     "description": "",
     "start_date": null,
     "end_date": null,
@@ -208,7 +208,7 @@
   "pk": 13,
   "fields": {
     "name": "KOFAX in MAKANI",
-    "name_ar": null,
+    "name_ar": "",
     "description": "",
     "start_date": null,
     "end_date": null,
@@ -225,7 +225,7 @@
   "pk": 14,
   "fields": {
     "name": "Dashboard (Property Valuation)",
-    "name_ar": null,
+    "name_ar": "",
     "description": "",
     "start_date": null,
     "end_date": null,
@@ -242,7 +242,7 @@
   "pk": 15,
   "fields": {
     "name": "Generate SHP files For UPD",
-    "name_ar": null,
+    "name_ar": "",
     "description": "",
     "start_date": null,
     "end_date": null,
@@ -259,7 +259,7 @@
   "pk": 16,
   "fields": {
     "name": "Infra Asset (Design) Release 1 (Street Lightening,Roads)",
-    "name_ar": null,
+    "name_ar": "",
     "description": "",
     "start_date": null,
     "end_date": null,
@@ -276,7 +276,7 @@
   "pk": 17,
   "fields": {
     "name": "Infra Asset (Design) Release 2 (Stormwater)",
-    "name_ar": null,
+    "name_ar": "",
     "description": "",
     "start_date": null,
     "end_date": null,
@@ -293,7 +293,7 @@
   "pk": 18,
   "fields": {
     "name": "Dashboard (old Building Statistics)",
-    "name_ar": null,
+    "name_ar": "",
     "description": "",
     "start_date": null,
     "end_date": null,
@@ -310,7 +310,7 @@
   "pk": 19,
   "fields": {
     "name": "SPS R1-Integration With ELMS",
-    "name_ar": null,
+    "name_ar": "",
     "description": "",
     "start_date": null,
     "end_date": null,
@@ -327,7 +327,7 @@
   "pk": 20,
   "fields": {
     "name": "Infra Asset (Design) Release 3 (Hard & Soft Landscape)",
-    "name_ar": null,
+    "name_ar": "",
     "description": "",
     "start_date": null,
     "end_date": null,
@@ -344,7 +344,7 @@
   "pk": 21,
   "fields": {
     "name": "Infra Asset (Design) Release 4 (Irrigation)",
-    "name_ar": null,
+    "name_ar": "",
     "description": "",
     "start_date": null,
     "end_date": null,
@@ -361,7 +361,7 @@
   "pk": 22,
   "fields": {
     "name": "Infrastructure files for bridge",
-    "name_ar": null,
+    "name_ar": "",
     "description": "",
     "start_date": null,
     "end_date": null,
@@ -378,7 +378,7 @@
   "pk": 23,
   "fields": {
     "name": "Tools for RFI preparation for UPD",
-    "name_ar": null,
+    "name_ar": "",
     "description": "",
     "start_date": null,
     "end_date": null,
@@ -395,7 +395,7 @@
   "pk": 24,
   "fields": {
     "name": "Demolition In MAKANI",
-    "name_ar": null,
+    "name_ar": "",
     "description": "",
     "start_date": null,
     "end_date": null,
@@ -412,7 +412,7 @@
   "pk": 25,
   "fields": {
     "name": "Building BOC Dashboard Phase 2",
-    "name_ar": null,
+    "name_ar": "",
     "description": "",
     "start_date": null,
     "end_date": null,
@@ -429,7 +429,7 @@
   "pk": 26,
   "fields": {
     "name": "Dashboard MIMS (Issues & Tracking)",
-    "name_ar": null,
+    "name_ar": "",
     "description": "",
     "start_date": null,
     "end_date": null,
@@ -446,7 +446,7 @@
   "pk": 27,
   "fields": {
     "name": "Dashboard Trade Building Statistics",
-    "name_ar": null,
+    "name_ar": "",
     "description": "",
     "start_date": null,
     "end_date": null,
@@ -463,7 +463,7 @@
   "pk": 28,
   "fields": {
     "name": "New Addressing in MAKANI",
-    "name_ar": null,
+    "name_ar": "",
     "description": "",
     "start_date": null,
     "end_date": null,
@@ -480,7 +480,7 @@
   "pk": 29,
   "fields": {
     "name": "Crane Proposal Submission",
-    "name_ar": null,
+    "name_ar": "",
     "description": "",
     "start_date": null,
     "end_date": null,
@@ -497,7 +497,7 @@
   "pk": 30,
   "fields": {
     "name": "MAKANI Integration with NCMS",
-    "name_ar": null,
+    "name_ar": "",
     "description": "",
     "start_date": null,
     "end_date": null,
@@ -514,7 +514,7 @@
   "pk": 31,
   "fields": {
     "name": "ADHA Application Migration",
-    "name_ar": null,
+    "name_ar": "",
     "description": "",
     "start_date": null,
     "end_date": null,
@@ -531,7 +531,7 @@
   "pk": 32,
   "fields": {
     "name": "Investment contracts in MAKANI",
-    "name_ar": null,
+    "name_ar": "",
     "description": "",
     "start_date": null,
     "end_date": null,
@@ -548,7 +548,7 @@
   "pk": 33,
   "fields": {
     "name": "Design Section MEPS services in MAKANI",
-    "name_ar": null,
+    "name_ar": "",
     "description": "",
     "start_date": null,
     "end_date": null,
@@ -565,7 +565,7 @@
   "pk": 34,
   "fields": {
     "name": "GEOBM Phase 1",
-    "name_ar": null,
+    "name_ar": "",
     "description": "",
     "start_date": null,
     "end_date": null,
@@ -582,7 +582,7 @@
   "pk": 35,
   "fields": {
     "name": "Elms update",
-    "name_ar": null,
+    "name_ar": "",
     "description": "",
     "start_date": null,
     "end_date": null,
@@ -599,7 +599,7 @@
   "pk": 36,
   "fields": {
     "name": "Maintenance Contracts in MAKANI",
-    "name_ar": null,
+    "name_ar": "",
     "description": "",
     "start_date": null,
     "end_date": null,
@@ -616,7 +616,7 @@
   "pk": 37,
   "fields": {
     "name": "Integration with Tadweer",
-    "name_ar": null,
+    "name_ar": "",
     "description": "",
     "start_date": null,
     "end_date": null,
@@ -633,7 +633,7 @@
   "pk": 38,
   "fields": {
     "name": "New Dashboard for MIMS",
-    "name_ar": null,
+    "name_ar": "",
     "description": "",
     "start_date": null,
     "end_date": null,
@@ -650,7 +650,7 @@
   "pk": 39,
   "fields": {
     "name": "Integration with DED( commercial Licenses)",
-    "name_ar": null,
+    "name_ar": "",
     "description": "",
     "start_date": null,
     "end_date": null,
