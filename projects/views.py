@@ -8,6 +8,8 @@ from .models import Project
 from .serializers import ProjectSerializer
 from rest_framework.generics import ListAPIView
 
+from rest_framework.permissions import IsAuthenticated
+from users.authentication import BearerTokenAuthentication
 
 def home(request):
     return JsonResponse({"app":'projects'})
@@ -31,5 +33,8 @@ def build(request):
 
 
 class ProjectListAPIView(ListAPIView):
+    authentication_classes = [BearerTokenAuthentication] # uses Authorization Bearer 'string'
+    permission_classes = [IsAuthenticated]
+
     queryset = Project.objects.all()
     serializer_class = ProjectSerializer
