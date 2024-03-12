@@ -29,9 +29,11 @@ SECRET_KEY = 'django-insecure-(u8+r-ug^y@k^3c)0*axybi*g526$5wq5&*3yzrdyzx$#1vb*3
 DEBUG = True
 
 ALLOWED_HOSTS = [
+    '*',
     '127.0.0.1',
     'adm-pm.me-south-1.elasticbeanstalk.com',
     'www.adm-pm.me-south-1.elasticbeanstalk.com',
+    'adm-pm.s3-website.me-central-1.amazonaws.com'
     ]
 
 
@@ -201,5 +203,6 @@ AUTHENTICATION_BACKENDS = [
 # ]
 
 CORSE_ALLOWED_ORIGINS = [
-    'http://localhost:4200',
+    # 'http://localhost:4200',
+    '*',
 ]
