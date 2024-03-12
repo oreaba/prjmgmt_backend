@@ -6,7 +6,7 @@ from django import forms
 from organizations.models import Team
 # Create your models here.
 class PMUser(AbstractUser):
-    user_id = models.AutoField(primary_key=True)
+    id = models.AutoField(primary_key=True)
     
     username = models.CharField(max_length=100, unique=True)
     email = models.EmailField(unique=True)

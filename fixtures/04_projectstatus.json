@@ -3,54 +3,54 @@
   "model": "projects.projectstatus",
   "pk": 1,
   "fields": {
-    "status": "Planned",
-    "status_ar": null,
-    "color": "Blue"
+    "text": "Planned",
+    "text_ar": "",
+    "color": "#6ec5ff"
   }
 },
 {
   "model": "projects.projectstatus",
   "pk": 2,
   "fields": {
-    "status": "In Progress",
-    "status_ar": null,
-    "color": "Orange"
+    "text": "In Progress",
+    "text_ar": "",
+    "color": "#ffa37e"
   }
 },
 {
   "model": "projects.projectstatus",
   "pk": 3,
   "fields": {
-    "status": "Waiting",
-    "status_ar": null,
-    "color": "yellow"
+    "text": "Waiting",
+    "text_ar": "",
+    "color": "#ffe449"
   }
 },
 {
   "model": "projects.projectstatus",
   "pk": 4,
   "fields": {
-    "status": "On Hold",
-    "status_ar": null,
-    "color": "grey"
+    "text": "On Hold",
+    "text_ar": "",
+    "color": "#a5a5a5"
   }
 },
 {
   "model": "projects.projectstatus",
   "pk": 5,
   "fields": {
-    "status": "Completed",
-    "status_ar": null,
-    "color": "green"
+    "text": "Completed",
+    "text_ar": "",
+    "color": "#4eb972"
   }
 },
 {
   "model": "projects.projectstatus",
   "pk": 6,
   "fields": {
-    "status": "Cancelled",
-    "status_ar": null,
-    "color": "red"
+    "text": "Cancelled",
+    "text_ar": "",
+    "color": "#ff5858"
   }
 }
 ]

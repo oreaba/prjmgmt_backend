@@ -10,7 +10,7 @@
     "end_date": "2024-03-11",
     "status": 5,
     "priority": 2,
-    "manager": 12,
+    "team_lead": 12,
     "created_by": 4,
     "created_at": "2024-03-11T10:14:41.846Z",
     "updated_at": "2024-03-11T10:26:32.208Z"
@@ -27,7 +27,7 @@
     "end_date": "2024-03-11",
     "status": 5,
     "priority": 2,
-    "manager": 12,
+    "team_lead": 12,
     "created_by": 1,
     "created_at": "2024-03-11T10:17:19.248Z",
     "updated_at": "2024-03-11T10:26:58.719Z"
@@ -44,7 +44,7 @@
     "end_date": null,
     "status": 5,
     "priority": 2,
-    "manager": 12,
+    "team_lead": 12,
     "created_by": 1,
     "created_at": "2024-03-11T10:27:21.622Z",
     "updated_at": "2024-03-11T10:27:21.622Z"
@@ -61,7 +61,7 @@
     "end_date": null,
     "status": 5,
     "priority": 2,
-    "manager": 13,
+    "team_lead": 13,
     "created_by": 1,
     "created_at": "2024-03-11T10:27:35.503Z",
     "updated_at": "2024-03-11T10:27:35.504Z"
@@ -78,7 +78,7 @@
     "end_date": null,
     "status": 5,
     "priority": 2,
-    "manager": 12,
+    "team_lead": 12,
     "created_by": 1,
     "created_at": "2024-03-11T10:27:51.983Z",
     "updated_at": "2024-03-11T10:27:51.983Z"
@@ -95,7 +95,7 @@
     "end_date": null,
     "status": 5,
     "priority": 2,
-    "manager": 12,
+    "team_lead": 12,
     "created_by": 1,
     "created_at": "2024-03-11T10:28:07.127Z",
     "updated_at": "2024-03-11T10:28:07.127Z"
@@ -112,7 +112,7 @@
     "end_date": null,
     "status": 5,
     "priority": 2,
-    "manager": 12,
+    "team_lead": 12,
     "created_by": 1,
     "created_at": "2024-03-11T10:28:33.815Z",
     "updated_at": "2024-03-11T10:28:33.815Z"
@@ -129,7 +129,7 @@
     "end_date": null,
     "status": 5,
     "priority": 2,
-    "manager": 12,
+    "team_lead": 12,
     "created_by": 1,
     "created_at": "2024-03-11T10:28:50.296Z",
     "updated_at": "2024-03-11T10:28:50.296Z"
@@ -146,7 +146,7 @@
     "end_date": null,
     "status": 5,
     "priority": 2,
-    "manager": 12,
+    "team_lead": 12,
     "created_by": 1,
     "created_at": "2024-03-11T10:29:07.152Z",
     "updated_at": "2024-03-11T10:29:07.152Z"
@@ -163,7 +163,7 @@
     "end_date": null,
     "status": 5,
     "priority": 2,
-    "manager": 12,
+    "team_lead": 12,
     "created_by": 1,
     "created_at": "2024-03-11T10:29:22.471Z",
     "updated_at": "2024-03-11T10:29:22.471Z"
@@ -180,7 +180,7 @@
     "end_date": null,
     "status": 5,
     "priority": 2,
-    "manager": 12,
+    "team_lead": 12,
     "created_by": 1,
     "created_at": "2024-03-11T10:29:35.263Z",
     "updated_at": "2024-03-11T10:29:35.263Z"
@@ -197,7 +197,7 @@
     "end_date": null,
     "status": 5,
     "priority": 2,
-    "manager": 12,
+    "team_lead": 12,
     "created_by": 1,
     "created_at": "2024-03-11T10:29:50.231Z",
     "updated_at": "2024-03-11T10:29:50.231Z"
@@ -214,7 +214,7 @@
     "end_date": null,
     "status": 5,
     "priority": 2,
-    "manager": 12,
+    "team_lead": 12,
     "created_by": 1,
     "created_at": "2024-03-11T10:30:04.664Z",
     "updated_at": "2024-03-11T10:30:04.664Z"
@@ -231,7 +231,7 @@
     "end_date": null,
     "status": 5,
     "priority": 2,
-    "manager": 12,
+    "team_lead": 12,
     "created_by": 1,
     "created_at": "2024-03-11T10:30:18.704Z",
     "updated_at": "2024-03-11T10:30:18.704Z"
@@ -248,7 +248,7 @@
     "end_date": null,
     "status": 5,
     "priority": 2,
-    "manager": 12,
+    "team_lead": 12,
     "created_by": 1,
     "created_at": "2024-03-11T10:30:29.129Z",
     "updated_at": "2024-03-11T10:30:29.129Z"
@@ -265,7 +265,7 @@
     "end_date": null,
     "status": 5,
     "priority": 2,
-    "manager": 12,
+    "team_lead": 12,
     "created_by": 1,
     "created_at": "2024-03-11T10:30:41.960Z",
     "updated_at": "2024-03-11T10:30:41.960Z"
@@ -282,7 +282,7 @@
     "end_date": null,
     "status": 5,
     "priority": 2,
-    "manager": 12,
+    "team_lead": 12,
     "created_by": 1,
     "created_at": "2024-03-11T10:30:54.888Z",
     "updated_at": "2024-03-11T10:30:54.888Z"
@@ -299,7 +299,7 @@
     "end_date": null,
     "status": 5,
     "priority": 2,
-    "manager": 12,
+    "team_lead": 12,
     "created_by": 1,
     "created_at": "2024-03-11T10:31:05.440Z",
     "updated_at": "2024-03-11T10:31:05.440Z"
@@ -316,7 +316,7 @@
     "end_date": null,
     "status": 5,
     "priority": 2,
-    "manager": 12,
+    "team_lead": 12,
     "created_by": 1,
     "created_at": "2024-03-11T10:31:33.369Z",
     "updated_at": "2024-03-11T10:31:33.369Z"
@@ -333,7 +333,7 @@
     "end_date": null,
     "status": 5,
     "priority": 2,
-    "manager": 12,
+    "team_lead": 12,
     "created_by": 1,
     "created_at": "2024-03-11T10:31:43.672Z",
     "updated_at": "2024-03-11T10:31:43.672Z"
@@ -350,7 +350,7 @@
     "end_date": null,
     "status": 5,
     "priority": 2,
-    "manager": 12,
+    "team_lead": 12,
     "created_by": 1,
     "created_at": "2024-03-11T10:31:55.319Z",
     "updated_at": "2024-03-11T10:31:55.319Z"
@@ -367,7 +367,7 @@
     "end_date": null,
     "status": 5,
     "priority": 2,
-    "manager": 12,
+    "team_lead": 12,
     "created_by": 1,
     "created_at": "2024-03-11T10:32:13.952Z",
     "updated_at": "2024-03-11T10:32:13.952Z"
@@ -384,7 +384,7 @@
     "end_date": null,
     "status": 5,
     "priority": 2,
-    "manager": 12,
+    "team_lead": 12,
     "created_by": 1,
     "created_at": "2024-03-11T10:32:28.136Z",
     "updated_at": "2024-03-11T10:32:28.136Z"
@@ -401,7 +401,7 @@
     "end_date": null,
     "status": 5,
     "priority": 2,
-    "manager": 12,
+    "team_lead": 12,
     "created_by": 1,
     "created_at": "2024-03-11T10:32:41.697Z",
     "updated_at": "2024-03-11T10:32:41.697Z"
@@ -418,7 +418,7 @@
     "end_date": null,
     "status": 5,
     "priority": 2,
-    "manager": 12,
+    "team_lead": 12,
     "created_by": 1,
     "created_at": "2024-03-11T10:32:53.272Z",
     "updated_at": "2024-03-11T10:32:53.272Z"
@@ -435,7 +435,7 @@
     "end_date": null,
     "status": 5,
     "priority": 2,
-    "manager": 12,
+    "team_lead": 12,
     "created_by": 1,
     "created_at": "2024-03-11T10:33:04.183Z",
     "updated_at": "2024-03-11T10:33:04.183Z"
@@ -452,7 +452,7 @@
     "end_date": null,
     "status": 5,
     "priority": 2,
-    "manager": 12,
+    "team_lead": 12,
     "created_by": 1,
     "created_at": "2024-03-11T10:33:19.120Z",
     "updated_at": "2024-03-11T10:33:19.120Z"
@@ -469,7 +469,7 @@
     "end_date": null,
     "status": 5,
     "priority": 2,
-    "manager": 12,
+    "team_lead": 12,
     "created_by": 1,
     "created_at": "2024-03-11T10:33:30.793Z",
     "updated_at": "2024-03-11T10:33:30.793Z"
@@ -486,7 +486,7 @@
     "end_date": null,
     "status": 5,
     "priority": 2,
-    "manager": 12,
+    "team_lead": 12,
     "created_by": 1,
     "created_at": "2024-03-11T10:33:43.135Z",
     "updated_at": "2024-03-11T10:33:43.135Z"
@@ -503,7 +503,7 @@
     "end_date": null,
     "status": 5,
     "priority": 2,
-    "manager": 12,
+    "team_lead": 12,
     "created_by": 1,
     "created_at": "2024-03-11T10:33:52.680Z",
     "updated_at": "2024-03-11T10:33:52.680Z"
@@ -520,7 +520,7 @@
     "end_date": null,
     "status": 5,
     "priority": 2,
-    "manager": 12,
+    "team_lead": 12,
     "created_by": 1,
     "created_at": "2024-03-11T10:34:03.368Z",
     "updated_at": "2024-03-11T10:34:03.368Z"
@@ -537,7 +537,7 @@
     "end_date": null,
     "status": 5,
     "priority": 2,
-    "manager": 12,
+    "team_lead": 12,
     "created_by": 1,
     "created_at": "2024-03-11T10:34:16.528Z",
     "updated_at": "2024-03-11T10:34:16.528Z"
@@ -554,7 +554,7 @@
     "end_date": null,
     "status": 5,
     "priority": 2,
-    "manager": 12,
+    "team_lead": 12,
     "created_by": 1,
     "created_at": "2024-03-11T10:34:28.151Z",
     "updated_at": "2024-03-11T10:34:28.151Z"
@@ -571,7 +571,7 @@
     "end_date": null,
     "status": 5,
     "priority": 2,
-    "manager": 12,
+    "team_lead": 12,
     "created_by": 1,
     "created_at": "2024-03-11T10:34:39.911Z",
     "updated_at": "2024-03-11T10:34:39.911Z"
@@ -588,7 +588,7 @@
     "end_date": null,
     "status": 5,
     "priority": 2,
-    "manager": 12,
+    "team_lead": 12,
     "created_by": 1,
     "created_at": "2024-03-11T10:34:51.599Z",
     "updated_at": "2024-03-11T10:34:51.599Z"
@@ -605,7 +605,7 @@
     "end_date": null,
     "status": 5,
     "priority": 2,
-    "manager": 12,
+    "team_lead": 12,
     "created_by": 1,
     "created_at": "2024-03-11T10:35:04.608Z",
     "updated_at": "2024-03-11T10:35:04.608Z"
@@ -622,7 +622,7 @@
     "end_date": null,
     "status": 5,
     "priority": 2,
-    "manager": 12,
+    "team_lead": 12,
     "created_by": 1,
     "created_at": "2024-03-11T10:35:13.096Z",
     "updated_at": "2024-03-11T10:35:13.096Z"
@@ -639,7 +639,7 @@
     "end_date": null,
     "status": 5,
     "priority": 2,
-    "manager": 12,
+    "team_lead": 12,
     "created_by": 1,
     "created_at": "2024-03-11T10:35:21.016Z",
     "updated_at": "2024-03-11T10:35:21.016Z"
@@ -656,7 +656,7 @@
     "end_date": null,
     "status": 5,
     "priority": 2,
-    "manager": 12,
+    "team_lead": 12,
     "created_by": 1,
     "created_at": "2024-03-11T10:35:31.199Z",
     "updated_at": "2024-03-11T10:35:31.200Z"

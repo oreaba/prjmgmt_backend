@@ -3,27 +3,27 @@
   "model": "projects.projectpriority",
   "pk": 1,
   "fields": {
-    "priority": "LOW",
-    "priority_ar": null,
-    "color": "grey"
+    "text": "LOW",
+    "text_ar": "",
+    "color": "#AEE9B0"
   }
 },
 {
   "model": "projects.projectpriority",
   "pk": 2,
   "fields": {
-    "priority": "NORMAL",
-    "priority_ar": null,
-    "color": "yellow"
+    "text": "NORMAL",
+    "text_ar": "",
+    "color": "#FFDE5B"
   }
 },
 {
   "model": "projects.projectpriority",
   "pk": 3,
   "fields": {
-    "priority": "HIGH",
-    "priority_ar": null,
-    "color": "red"
+    "text": "HIGH",
+    "text_ar": "",
+    "color": "#ff9595"
   }
 }
 ]

@@ -43,7 +43,7 @@ class Program(models.Model):
         return self.name
 # -------------------------------------------------------------------------------------------------
 class Project(models.Model):
-    project_id = models.AutoField(primary_key=True)
+    id = models.AutoField(primary_key=True)
 
     # program = models.ForeignKey(Program, on_delete=models.PROTECT, blank=True, null=True)
     # Limitation: one project cannot be associated with 2 sections.
@@ -59,17 +59,21 @@ class Project(models.Model):
     status = models.ForeignKey('ProjectStatus', on_delete=models.PROTECT)
     priority = models.ForeignKey('ProjectPriority', on_delete=models.PROTECT)
     
-    manager = models.ForeignKey(User, on_delete=models.CASCADE, related_name='managed_project')
+    team_lead = models.ForeignKey(User, on_delete=models.CASCADE, related_name='managed_project')
 
     created_by = models.ForeignKey(User, on_delete=models.PROTECT, related_name='created_project')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
     class Meta:
         verbose_name        = "Project"
         verbose_name_plural = "Projects"
     
     def __str__(self):
         return self.name
+    
+    def get_progress(self):
+        return 0
 
 # -------------------------------------------------------------------------------------------------
 class ProjectUser(models.Model):
@@ -87,30 +91,26 @@ class ProjectUser(models.Model):
         return f"{self.project} - {self.user} - {self.role}"
 # -------------------------------------------------------------------------------------------------
 class ProjectStatus(models.Model):
-    status_id = models.AutoField(primary_key=True)
-    status = models.CharField(max_length=50)
-    status_ar = models.CharField(max_length=50, blank=True, null=True)
+    id = models.AutoField(primary_key=True)
+    text = models.CharField(max_length=50)
+    text_ar = models.CharField(max_length=50, default='')
     color = models.CharField(max_length=7, blank=True, null=True)  # Assuming color code in hexadecimal format
     class Meta:
         verbose_name        = "Project Status"
         verbose_name_plural = "Project Status"
 
     def __str__(self):
-        return self.status
+        return self.text
 # -------------------------------------------------------------------------------------------------
 class ProjectPriority(models.Model):
-    priority_id = models.AutoField(primary_key=True)
-    priority = models.CharField(max_length=50)
-    priority_ar = models.CharField(max_length=50, blank=True, null=True)
+    id = models.AutoField(primary_key=True)
+    text = models.CharField(max_length=50)
+    text_ar = models.CharField(max_length=50, default='')
     color = models.CharField(max_length=7)  # Assuming color code in hexadecimal format
     class Meta:
         verbose_name        = "Project Priority"
         verbose_name_plural = "Project Priority"
 
     def __str__(self):
-        return self.priority
+        return self.text
 # -------------------------------------------------------------------------------------------------
-
-    
-
-    

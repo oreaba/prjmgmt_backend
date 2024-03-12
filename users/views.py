@@ -60,7 +60,7 @@ class LoginView(APIView):
                 #     # Add more fields as needed
                 # }
 
-                user_profile = User.objects.get(user_id=user.user_id)
+                user_profile = User.objects.get(id=user.id)
                 serializer = UserProfileSerializer(user_profile)
                 user_data = serializer.data
                 # return Response(serializer.data)
@@ -89,6 +89,6 @@ class UserProfileAPIView(APIView):
     permission_classes = [IsAuthenticated]
 
     def get(self, request, format=None):
-        user_profile = User.objects.get(user_id=request.user.user_id)
+        user_profile = User.objects.get(id=request.user.id)
         serializer = UserProfileSerializer(user_profile)
         return Response(serializer.data)
