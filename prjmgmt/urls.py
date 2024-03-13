@@ -22,12 +22,16 @@ from rest_framework.routers import DefaultRouter
 from users import views as user_views
 router = DefaultRouter()
 # router.register(r'users', user_views.UserViewSet, basename='user')
+from django.views.generic import TemplateView
+
 
 def home(request):
     return JsonResponse({"System":'Project Management'})
 
 urlpatterns = [
-    path('', home, name='prjmgmt-home'),
+    # path('', home, name='prjmgmt-home'),
+    path('', TemplateView.as_view(template_name='index.html'), name='home',),  # Serve Angular's index.html
+
     path('admin/', admin.site.urls),
     #  path('admin/', custom_admin_site.urls),
     
@@ -36,5 +40,4 @@ urlpatterns = [
     path('api/users/', include('users.urls')),
     path('api/projects/', include('projects.urls')),
     # path('users/', include('users.urls')),
-
 ]

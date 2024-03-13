@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'projects',
     'tasks',
     'organizations',
+    # 'website',
 
     # framework applications
     'rest_framework',
@@ -75,7 +76,12 @@ ROOT_URLCONF = 'prjmgmt.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates/')],
+        'DIRS': [
+                    os.path.join(BASE_DIR, 'templates/'),
+                    os.path.join(BASE_DIR, 'static_files/'),
+                    os.path.join(BASE_DIR, 'static_files/website/'),
+
+                 ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -172,7 +178,15 @@ USE_TZ = True
 
 STATIC_URL = 'static/' # defines the URL prefix for serving static files.
 STATIC_ROOT = os.path.join(BASE_DIR, 'static_files') #specifies the directory where collected static files will be stored.
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static_admin'),] # provides additional directories where static files will be collected from
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static_admin'),# provides additional directories where static files will be collected from
+                    os.path.join(BASE_DIR, 'static_frontapp')] # angular dist folder
+
+
+
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
