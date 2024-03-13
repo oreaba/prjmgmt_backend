@@ -32,3 +32,8 @@ option_settings:
 aws:elasticbeanstalk:environment:proxy:staticfiles:
     /static: static
 
+
+
+## angular frontend
+"start": "ng serve --baseHref=/static/website/",
+"build": "ng build --baseHref=/static/website/",

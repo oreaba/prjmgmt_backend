@@ -24,13 +24,16 @@ router = DefaultRouter()
 # router.register(r'users', user_views.UserViewSet, basename='user')
 from django.views.generic import TemplateView
 
-
+# -------------------------------------
+    
 def home(request):
     return JsonResponse({"System":'Project Management'})
 
 urlpatterns = [
     # path('', home, name='prjmgmt-home'),
     path('', TemplateView.as_view(template_name='index.html'), name='home',),  # Serve Angular's index.html
+    # path('static', TemplateView.as_view(template_name='index.html'), name='home',),  # Serve Angular's index.html
+    # path('static/website/', TemplateView.as_view(template_name='index.html'), name='home2'),  # Serve Angular's index.html
 
     path('admin/', admin.site.urls),
     #  path('admin/', custom_admin_site.urls),
@@ -41,3 +44,4 @@ urlpatterns = [
     path('api/projects/', include('projects.urls')),
     # path('users/', include('users.urls')),
 ]
+
