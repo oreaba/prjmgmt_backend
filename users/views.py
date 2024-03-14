@@ -31,6 +31,10 @@ from .serializers import UserProfileSerializer
 # we use this login view to authenticate user Django's default
 # Added for DRF: create and return token for authenticated user
 
+from rest_framework import viewsets
+
+
+# class LoginView(viewsets.ModelViewSet):
 class LoginView(APIView):
     def post(self, request, *args, **kwargs):
         serializer = LoginSerializer(data=request.data)
@@ -92,3 +96,7 @@ class UserProfileAPIView(APIView):
         user_profile = User.objects.get(id=request.user.id)
         serializer = UserProfileSerializer(user_profile)
         return Response(serializer.data)
+
+class UserViewSet(viewsets.ModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = UserProfileSerializer

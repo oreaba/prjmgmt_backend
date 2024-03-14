@@ -30,4 +30,6 @@ class ProjectSerializer(serializers.ModelSerializer):
 
     def get_progress(self, obj):
         # Implement your logic to calculate progress here
+        if obj.status.text == 'Completed':
+            return 100
         return obj.get_progress()

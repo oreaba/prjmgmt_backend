@@ -58,6 +58,7 @@ INSTALLED_APPS = [
     # framework applications
     'rest_framework',
     'rest_framework.authtoken', # to issue tokens
+    'drf_yasg'       # API Documentation
 
 ]
 
@@ -69,7 +70,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'users.middleware.RedirectToHomePageMiddleware',  # Add your middleware here
+    # 'users.middleware.RedirectToHomePageMiddleware',  # redirect middleware
 
 ]
 
