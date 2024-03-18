@@ -28,7 +28,18 @@ admin.site.register(ProjectStatus)
 admin.site.register(ProjectUser)
 
 
-admin.site.site_header = "Project Management"
-admin.site.site_title = "Project Management"
-admin.site.index_title = "Welcome to Project Management Portal"
 
+from django.contrib.auth.models import Permission, User
+admin.site.register(Permission)
+
+from django.contrib.contenttypes.models import ContentType
+admin.site.register(ContentType)
+
+from django.contrib.admin.models import LogEntry
+admin.site.register(LogEntry)
+
+
+
+admin.site.site_header = "Project Management"
+admin.site.site_title = "GIS Project Management"
+admin.site.index_title = "Admin"
