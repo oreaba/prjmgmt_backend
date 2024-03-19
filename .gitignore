@@ -3,3 +3,6 @@ local_db/*.*
 # .elasticbeanstalk/*
 # !.elasticbeanstalk/*.cfg.yml
 # !.elasticbeanstalk/*.global.yml
+
+static_files/*.*
+static_frontapp/*.*
