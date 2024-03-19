@@ -60,7 +60,7 @@ source /var/app/venv/*/bin/activate
 cd /var/app/current/
 python manage.py makemigrations < <(yes y) && python manage.py migrate
 python manage.py loaddata fixtures/*.json
-python manage.py collectstatic < <(yes yes)
+# python manage.py collectstatic < <(yes yes)
 sudo chmod 777 ${EFS_MOUNT_DIR}/adm-pm.db.sqlite3
 # python manage.py mysuperuser
 # sudo chmod 777 ${EFS_MOUNT_DIR}/adm-pm.db.sqlite3
