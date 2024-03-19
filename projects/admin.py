@@ -1,5 +1,5 @@
 from django.contrib import admin
-from projects.models import Project, ProjectPriority, ProjectStatus, ProjectUser
+from projects.models import Project, ProjectPriority, ProjectStatus, ProjectUser, ProjectType
 # Register your models here.
 
 
@@ -24,6 +24,7 @@ class ProjectAdmin(admin.ModelAdmin):
 
 admin.site.register(Project, ProjectAdmin)
 admin.site.register(ProjectPriority)
+admin.site.register(ProjectType)
 admin.site.register(ProjectStatus)
 admin.site.register(ProjectUser)
 

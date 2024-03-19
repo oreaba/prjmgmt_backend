@@ -114,3 +114,14 @@ class ProjectPriority(models.Model):
     def __str__(self):
         return self.text
 # -------------------------------------------------------------------------------------------------
+class ProjectType(models.Model):
+    id = models.AutoField(primary_key=True)
+    text = models.CharField(max_length=50)
+    text_ar = models.CharField(max_length=50, default='')
+    color = models.CharField(max_length=7, blank=True, null=True)  # Assuming color code in hexadecimal format
+    class Meta:
+        verbose_name        = "Project Type"
+        verbose_name_plural = "Project Type"
+
+    def __str__(self):
+        return self.text
