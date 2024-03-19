@@ -54,9 +54,13 @@ def home(request):
     return JsonResponse({"System":'Project Management'})
 
 # ----------------------------------
+from tasks.views import HomePageView
 urlpatterns = [
     # path('', home, name='prjmgmt-home'),
-    path('', TemplateView.as_view(template_name='index.html'), name='home',),  # Serve Angular's index.html
+    
+    # path('', TemplateView.as_view(template_name='index.html'), name='home',),  # Serve Angular's index.html
+    path('', HomePageView.as_view(), name='home',),  # Serve Angular's index.html
+
     # path('static', TemplateView.as_view(template_name='index.html'), name='home',),  # Serve Angular's index.html
     # path('static/website/', TemplateView.as_view(template_name='index.html'), name='home2'),  # Serve Angular's index.html
 

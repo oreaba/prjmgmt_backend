@@ -93,7 +93,7 @@ TEMPLATES = [
         'DIRS': [
                     os.path.join(BASE_DIR, 'templates/'),
                     os.path.join(BASE_DIR, 'static_files/'),
-                    os.path.join(BASE_DIR, 'static_files/website/'),
+                    # os.path.join(BASE_DIR, 'static_files/website/'),
 
                  ],
         'APP_DIRS': True,
@@ -107,6 +107,17 @@ TEMPLATES = [
         },
     },
 ]
+
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/5.0/howto/static-files/
+
+STATIC_URL = 'static/' # defines the URL prefix for serving static files.
+STATIC_ROOT = os.path.join(BASE_DIR, 'static_files') #specifies the directory where collected static files will be stored.
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static_admin'),# provides additional directories where static files will be collected from
+                    # you should put here the local director for which angular build the project which is:
+                    # D:\folder\projects\project_management\prjmgmt_frontend            # will copy 'website' folder to 'static_files'
+                    os.path.join(BASE_DIR, 'static_frontapp')] # angular 'website' folder - previously 'dis' 
+
 
 WSGI_APPLICATION = 'prjmgmt.wsgi.application'
 
@@ -182,16 +193,6 @@ TIME_ZONE = 'Asia/Dubai' #'UTC'
 USE_I18N = True
 USE_TZ = True
 
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/5.0/howto/static-files/
-
-STATIC_URL = 'static/' # defines the URL prefix for serving static files.
-STATIC_ROOT = os.path.join(BASE_DIR, 'static_files') #specifies the directory where collected static files will be stored.
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static_admin'),# provides additional directories where static files will be collected from
-                    # you should put here the local director for which angular build the project which is:
-                    # D:\folder\projects\project_management\prjmgmt_frontend            # will copy 'website' folder to 'static_files'
-                    os.path.join(BASE_DIR, 'static_frontapp')] # angular 'website' folder - previously 'dis' 
 
 
 
