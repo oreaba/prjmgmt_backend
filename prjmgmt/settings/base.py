@@ -17,24 +17,35 @@ import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
-
-
-
-
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
+# will be loaded depending on the environemnt
+SQL_FILE ='' 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-(u8+r-ug^y@k^3c)0*axybi*g526$5wq5&*3yzrdyzx$#1vb*3'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
-ALLOWED_HOSTS = [
-    '*',
-    '127.0.0.1',
-    'adm-pm.me-south-1.elasticbeanstalk.com',
-    'www.adm-pm.me-south-1.elasticbeanstalk.com',
-    'adm-pm.s3-website.me-central-1.amazonaws.com'
-    ]
+
+# -------------------------------------------------------------------
+import os
+from enum import Enum
+
+from environs import Env
+env = Env()
+env.read_env() # load .env file
+
+class EnvType(Enum):
+    UNDEFINED = None
+    LOCAL = 'local'
+    DEVELOPMENT = 'dev'
+    STAGING = 'stag'
+    PRODUCTION = 'prod'
+
+ADM_PM_ENV = EnvType(os.getenv('ADM_PM_ENV', EnvType.PRODUCTION.value)) # default: prod
+print('loading environment: ', ADM_PM_ENV)
+# -------------------------------------------------------------------
+
+
+
 
 
 # Application definition
@@ -104,36 +115,35 @@ WSGI_APPLICATION = 'prjmgmt.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 #------------------------- Environment section ---------------
-from enum import Enum
-from environs import Env
-env = Env()
-env.read_env()
+# from enum import Enum
+# from environs import Env
+# env = Env()
+# env.read_env() # load .env file
 
-class EnvType(Enum):
-    UNDEFINED = None
-    LOCAL = 'local'
-    DEVELOPMENT = 'dev'
-    STAGING = 'stag'
-    PRODUCTION = 'prod'
+# class EnvType(Enum):
+#     UNDEFINED = None
+#     LOCAL = 'local'
+#     DEVELOPMENT = 'dev'
+#     STAGING = 'stag'
+#     PRODUCTION = 'prod'
     
     # @classmethod
     # def _missing_(cls, value: object) -> os.Any:
     #     return super()._missing_(cls.UNDEFINED)
     
-ADM_PM_ENV = EnvType(os.getenv('ADM_PM_ENV', EnvType.PRODUCTION.value))
-SQL_FILE = '/efs-adm-pm-db-prod/adm-pm.db.sqlite3' # same as .ebextensions/env_variables.config - /efs-adm-pm-db-prod
-if ADM_PM_ENV == EnvType.LOCAL: 
-    SQL_FILE = f'{BASE_DIR}/local_db/adm-pm.db.sqlite3'
-print('loading environment: ', ADM_PM_ENV)
+# ADM_PM_ENV = EnvType(os.getenv('ADM_PM_ENV', EnvType.PRODUCTION.value))
+# SQL_FILE = '/efs-adm-pm-db-prod/adm-pm.db.sqlite3' # same as .ebextensions/env_variables.config - /efs-adm-pm-db-prod
+# if ADM_PM_ENV == EnvType.LOCAL: 
+    # SQL_FILE = f'{BASE_DIR}/local_db/adm-pm.db.sqlite3'
 
-print('Loading database at: ', SQL_FILE)
 # -----------------------------------------------------------
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': SQL_FILE,#BASE_DIR / 'db.sqlite3',
-    }
-}
+# print(100*'-.-',SQL_FILE)
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': SQL_FILE,
+#     }
+# }
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.oracle',
@@ -168,11 +178,8 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
-
 TIME_ZONE = 'Asia/Dubai' #'UTC'
-
 USE_I18N = True
-
 USE_TZ = True
 
 
@@ -223,7 +230,3 @@ AUTHENTICATION_BACKENDS = [
 #     'django.contrib.auth.hashers.PBKDF2PasswordHasher',
 # ]
 
-CORSE_ALLOWED_ORIGINS = [
-    # 'http://localhost:4200',
-    '*',
-]
