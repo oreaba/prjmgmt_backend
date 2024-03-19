@@ -21,7 +21,7 @@ class PMUserAdmin(UserAdmin):
     add_form = PMUserCreationForm
     form = PMUserChangeForm
     model = PMUser
-    list_display = ['username', 'email', 'first_name', 'last_name', 'is_staff']
+    list_display = ['username', 'email', 'first_name', 'last_name', 'is_staff', 'last_login']
 
     fieldsets = (
         (None, {'fields': ('username', 'password' )}),

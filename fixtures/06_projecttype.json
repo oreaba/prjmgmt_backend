@@ -1,0 +1,74 @@
+[
+{
+  "model": "projects.projecttype",
+  "pk": 1,
+  "fields": {
+    "text": "Desktop Application",
+    "text_ar": null,
+    "color": null
+  }
+},
+{
+  "model": "projects.projecttype",
+  "pk": 2,
+  "fields": {
+    "text": "Web Tools",
+    "text_ar": null,
+    "color": null
+  }
+},
+{
+  "model": "projects.projecttype",
+  "pk": 3,
+  "fields": {
+    "text": "Desktop Tools",
+    "text_ar": null,
+    "color": null
+  }
+},
+{
+  "model": "projects.projecttype",
+  "pk": 4,
+  "fields": {
+    "text": "Layers",
+    "text_ar": null,
+    "color": null
+  }
+},
+{
+  "model": "projects.projecttype",
+  "pk": 5,
+  "fields": {
+    "text": "Database Schema/Model",
+    "text_ar": null,
+    "color": null
+  }
+},
+{
+  "model": "projects.projecttype",
+  "pk": 6,
+  "fields": {
+    "text": "Database Migrations",
+    "text_ar": null,
+    "color": null
+  }
+},
+{
+  "model": "projects.projecttype",
+  "pk": 7,
+  "fields": {
+    "text": "Database Integrations",
+    "text_ar": null,
+    "color": null
+  }
+},
+{
+  "model": "projects.projecttype",
+  "pk": 8,
+  "fields": {
+    "text": "General",
+    "text_ar": null,
+    "color": null
+  }
+}
+]

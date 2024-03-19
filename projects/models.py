@@ -117,7 +117,7 @@ class ProjectPriority(models.Model):
 class ProjectType(models.Model):
     id = models.AutoField(primary_key=True)
     text = models.CharField(max_length=50)
-    text_ar = models.CharField(max_length=50, default='')
+    text_ar = models.CharField(max_length=50, blank=True, null=True)
     color = models.CharField(max_length=7, blank=True, null=True)  # Assuming color code in hexadecimal format
     class Meta:
         verbose_name        = "Project Type"
